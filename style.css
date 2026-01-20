@@ -80,6 +80,7 @@ ul { list-style: none; }
     font-size: 3rem; 
     margin-bottom: 20px; 
     background: linear-gradient(135deg, var(--text-heading) 0%, #475569 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -221,6 +222,7 @@ ul { list-style: none; }
     letter-spacing: -0.04em;
     line-height: 1.1;
     background: radial-gradient(circle at top left, var(--text-heading), #475569);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 2px 40px rgba(0,0,0,0.1);
@@ -324,7 +326,7 @@ ul { list-style: none; }
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    auto-rows: 300px;
+    /* auto-rows: 300px; */
     gap: 32px;
 }
 .item-large { 
