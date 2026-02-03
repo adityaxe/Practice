@@ -38,34 +38,51 @@ document.addEventListener('DOMContentLoaded', () => {
         item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(item);
     });
-
-    // Parallax effect for hero cards
-    document.addEventListener('mousemove', (e) => {
-        const mouseX = e.clientX / window.innerWidth;
-        const mouseY = e.clientY / window.innerHeight;
-
-        const cards = document.querySelectorAll('.module-card');
-        
-        cards.forEach((card, index) => {
-            const depth = (index + 1) * 10;
-            const moveX = (mouseX - 0.5) * depth;
-            const moveY = (mouseY - 0.5) * depth;
-            
-            // Preserve existing transforms if any
-            // We use a CSS variable or basic transform append if simple
-            // For simplicity in this vanilla JS, we'll just adjust CSS translate
-            // But we need to be careful not to override initial animations.
-            // A safer bet for "sophisticated" feel without fighting css animations is tilting.
-            
-            // Let's use simple subtle parallax after animation is done (approx)
-            setTimeout(() => {
-                // Check if element has class 'card-team' which has rotation
-                if(card.classList.contains('card-team')) {
-                     card.style.transform = `translate(${moveX}px, ${moveY}px) rotate(-2deg)`;
-                } else {
-                     card.style.transform = `translate(${moveX}px, ${moveY}px)`;
-                }
-            }, 1000);
-        });
-    });
 });
+
+// Form Switching Logic (exposed globally for onclick handlers)
+window.switchForm = function(type) {
+    const candidateBtn = document.querySelector("button[onclick=\"switchForm('candidate')\"]");
+    const employerBtn = document.querySelector("button[onclick=\"switchForm('employer')\"]");
+    const indicator = document.querySelector(".toggle-indicator");
+    
+    // Forms
+    const candidateForm = document.getElementById('candidate-form');
+    const employerForm = document.getElementById('employer-form');
+
+    if (!candidateForm || !employerForm) return;
+
+    if (type === 'candidate') {
+        if(candidateBtn) candidateBtn.classList.add('active');
+        if(employerBtn) employerBtn.classList.remove('active');
+        if(indicator) indicator.style.transform = 'translateX(0)'; 
+        // Note: CSS might handle the position if we rely on classes 
+        // or we can manipulate left/transform directly.
+        // Assuming the CSS handles indicator position via .active or we need to set it.
+        // Looking at common toggle patterns, usually 'active' class on btn drives it 
+        // OR we move the indicator. style.css analysis suggests purely manual move might be needed if not CSS driven.
+        if(indicator) indicator.style.left = '4px';
+
+        candidateForm.style.display = 'grid';
+        employerForm.style.display = 'none';
+
+        // Add small animation
+        candidateForm.animate([
+            { opacity: 0, transform: 'translateY(10px)' },
+            { opacity: 1, transform: 'translateY(0)' }
+        ], { duration: 300, easing: 'ease-out' });
+
+    } else {
+        if(employerBtn) employerBtn.classList.add('active');
+        if(candidateBtn) candidateBtn.classList.remove('active');
+        if(indicator) indicator.style.left = 'calc(50% + 4px)'; // Move to right side
+
+        candidateForm.style.display = 'none';
+        employerForm.style.display = 'grid';
+
+        employerForm.animate([
+            { opacity: 0, transform: 'translateY(10px)' },
+            { opacity: 1, transform: 'translateY(0)' }
+        ], { duration: 300, easing: 'ease-out' });
+    }
+}
