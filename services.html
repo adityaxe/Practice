@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Synergy Plus</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .service-block {
+            margin-bottom: 120px;
+        }
+        .service-block:last-child {
+            margin-bottom: 60px;
+        }
+        /* Reuse grid style but customized for this page if needed */
+        .service-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .service-card-detail {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .service-cta {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mesh-background">
+        <!-- New Glass Orbs & Floating Icons -->
+        <div class="shape-orb orb-lg"></div>
+        <div class="shape-orb orb-md"></div>
+        <div class="shape-orb orb-sm"></div>
+
+        <!-- Floating Recruitment Icons -->
+        <div class="floating-element float-search" style="--r: 15deg; --r-to: 25deg;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </div>
+        <div class="floating-element float-user" style="--r: -5deg; --r-to: 5deg;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <div class="floating-element float-case" style="--r: -10deg; --r-to: -20deg;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+        </div>
+    </div>
+    
+    <nav class="navbar">
+        <a href="index.html" class="logo-container">
+            <img src="Assets/logo.png" alt="Synergy Plus Business Consulting" class="logo-img">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" style="color: var(--primary);">Services</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="founder.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    </nav>
+
+    <section class="hero-section" style="padding-top: 160px; padding-bottom: 80px; min-height: auto;">
+        <div class="container">
+            <div class="hero-content fade-in-up" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h1>Expertise That Drives Growth</h1>
+                <p>From strategic HR frameworks to high-level management consulting, we provide the tools your business needs to excel in a competitive landscape.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section" style="background: transparent; padding-top: 20px;">
+        <div class="container">
+            
+            <!-- HR Solutions -->
+            <div class="service-block">
+                <div class="section-header" style="text-align: left; margin: 0 auto 40px 0;">
+                    <div class="icon-box icon-primary" style="width: 60px; height: 60px; margin-bottom: 24px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h2>HR Solutions</h2>
+                    <p>Building the backbone of successful organizations through people-centric strategies. We handle the complexities of workforce management so you can focus on innovation.</p>
+                </div>
+
+                <div class="service-details-grid">
+                    <div class="module-card service-card-detail">
+                        <h3 style="margin-bottom: 16px; color: var(--text-heading);">Talent Acquisition</h3>
+                        <p style="color: var(--text-body); margin-bottom: 24px; flex-grow: 1;">We go beyond simple matchmaking. Our rigorous screening process ensures you get candidates who not only possess the right technical skills but also align with your company culture.</p>
+                        <ul style="color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 12px;">
+                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--primary);">✓</span> Executive Search</li>
+                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--primary);">✓</span> Technical Recruitment</li>
+                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--primary);">✓</span> Remote Staffing solutions</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card service-card-detail">
+                        <h3 style="margin-bottom: 16px; color: var(--text-heading);">Operations & Compliance</h3>
+                        <p style="color: var(--text-body); margin-bottom: 24px; flex-grow: 1;">Mitigate risk and streamline operations. We help set up robust HR frameworks, employee handbooks, and compliance policies tailored to your industry.</p>
+                        <ul style="color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 12px;">
+                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--primary);">✓</span> Policy Formulation</li>
+                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--primary);">✓</span> Payroll Management</li>
+                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--primary);">✓</span> Legal Compliance Audits</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-cta">
+                    <a href="contact.html?type=employer" class="btn btn-primary">Find Top Talent</a>
+                </div>
+            </div>
+
+            <!-- Management Consulting -->
+            <div class="service-block">
+                <div class="section-header" style="text-align: left; margin: 0 auto 40px 0;">
+                    <div class="icon-box icon-accent" style="width: 60px; height: 60px; margin-bottom: 24px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    </div>
+                    <h2>Management Consulting</h2>
+                    <p>Strategic insights to navigate change, improve performance, and accelerate growth. We partner with leadership to solve their most critical challenges.</p>
+                </div>
+
+                <div class="service-details-grid">
+                    <div class="module-card service-card-detail">
+                        <h3 style="margin-bottom: 16px; color: var(--text-heading);">Business Strategy</h3>
+                        <p style="color: var(--text-body); margin-bottom: 24px; flex-grow: 1;">Navigate complex market dynamics with our expert guidance. We help define your vision and build a roadmap for sustainable expansion and profitability.</p>
+                        <ul style="color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 12px;">
+                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--accent);">✓</span> Market Entry Strategy</li>
+                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--accent);">✓</span> Business Process Re-engineering</li>
+                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--accent);">✓</span> Digital Transformation</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card service-card-detail">
+                        <h3 style="margin-bottom: 16px; color: var(--text-heading);">Financial Advisory</h3>
+                        <p style="color: var(--text-body); margin-bottom: 24px; flex-grow: 1;">Optimize your capital and secure your bottom line. Our financial experts provide deep analysis to assist in key decision-making processes.</p>
+                        <ul style="color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 12px;">
+                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--accent);">✓</span> Financial Modeling & Analysis</li>
+                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--accent);">✓</span> Risk Assessment</li>
+                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--accent);">✓</span> Cost Optimization Structures</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-cta">
+                    <a href="contact.html?type=employer" class="btn btn-secondary">Consult with Experts</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="logo-container">
+                    <img src="Assets/logo.png" alt="Synergy Plus Business Consulting" class="logo-img">
+                </a>
+                <p>Connecting talent with opportunity worldwide.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="founder.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Addy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
