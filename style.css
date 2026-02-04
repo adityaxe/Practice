@@ -61,87 +61,7 @@ body {
     perspective: 1000px;
 }
 
-/* 3D Cube System */
-.shape-3d {
-    position: absolute;
-    transform-style: preserve-3d;
-    animation: floatRotate 30s infinite linear;
-}
-
-.shape-cube-lg {
-    width: 140px; height: 140px;
-    top: 15%; left: 8%;
-    animation-delay: 0s;
-}
-
-.shape-cube-sm {
-    width: 80px; height: 80px;
-    bottom: 15%; right: 10%;
-    animation-duration: 40s;
-    animation-direction: reverse;
-}
-
-.shape-cube-xs {
-    width: 60px; height: 60px;
-    top: 40%; right: 25%;
-    opacity: 0.6;
-    animation-duration: 25s;
-}
-
-.cube-face {
-    position: absolute;
-    display: flex;
-    align-items: center; justify-content: center;
-    backface-visibility: visible; /* Glass effect needs backface */
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
-}
-
-/* Large Cube Styling */
-.shape-cube-lg .cube-face {
-    width: 140px; height: 140px;
-    background: rgba(37, 99, 235, 0.03); /* Blue Tint */
-    backdrop-filter: blur(2px);
-}
-.shape-cube-lg .cube-face:nth-child(1) { transform: rotateY(0deg) translateZ(70px); }
-.shape-cube-lg .cube-face:nth-child(2) { transform: rotateY(90deg) translateZ(70px); }
-.shape-cube-lg .cube-face:nth-child(3) { transform: rotateY(180deg) translateZ(70px); }
-.shape-cube-lg .cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(70px); }
-.shape-cube-lg .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(70px); }
-.shape-cube-lg .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(70px); }
-
-/* Small Cube Styling */
-.shape-cube-sm .cube-face {
-    width: 80px; height: 80px;
-    background: rgba(245, 158, 11, 0.05); /* Orange Tint */
-    border-color: rgba(245, 158, 11, 0.2);
-}
-.shape-cube-sm .cube-face:nth-child(1) { transform: rotateY(0deg) translateZ(40px); }
-.shape-cube-sm .cube-face:nth-child(2) { transform: rotateY(90deg) translateZ(40px); }
-.shape-cube-sm .cube-face:nth-child(3) { transform: rotateY(180deg) translateZ(40px); }
-.shape-cube-sm .cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(40px); }
-.shape-cube-sm .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(40px); }
-.shape-cube-sm .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(40px); }
-
-/* XS Cube Styling */
-.shape-cube-xs .cube-face {
-    width: 60px; height: 60px;
-    background: rgba(59, 130, 246, 0.05);
-}
-.shape-cube-xs .cube-face:nth-child(1) { transform: rotateY(0deg) translateZ(30px); }
-.shape-cube-xs .cube-face:nth-child(2) { transform: rotateY(90deg) translateZ(30px); }
-.shape-cube-xs .cube-face:nth-child(3) { transform: rotateY(180deg) translateZ(30px); }
-.shape-cube-xs .cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(30px); }
-.shape-cube-xs .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(30px); }
-.shape-cube-xs .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(30px); }
-
-@keyframes floatRotate {
-    0% { transform: rotateX(0deg) rotateY(0deg) translateY(0); }
-    25% { transform: rotateX(90deg) rotateY(45deg) translateY(-20px); }
-    50% { transform: rotateX(180deg) rotateY(90deg) translateY(0); }
-    75% { transform: rotateX(270deg) rotateY(135deg) translateY(20px); }
-    100% { transform: rotateX(360deg) rotateY(180deg) translateY(0); }
-}
+/* 3D Cube System Removed for New Glass/Orb Theme */
 
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
@@ -1149,5 +1069,107 @@ form.active-form {
     .hero-split, .profile-layout { grid-template-columns: 1fr; gap: 40px; }
     .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
     .gallery-item.lg, .gallery-item.wide { grid-column: span 1; height: 300px; }
+}
+
+
+/* New 3D Elements & Background Updates */
+body {
+    background: radial-gradient(circle at top left, #f0f9ff 0%, #e0f2fe 40%, #bae6fd 100%);
+    background-attachment: fixed;
+}
+
+.mesh-background {
+    background: transparent; /* Clean overlay */
+    overflow: visible;
+}
+
+/* Glass Orb (Sphere Replacement) */
+.shape-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1) 40%, rgba(56, 189, 248, 0.4) 100%);
+    box-shadow: 
+        inset -10px -10px 20px rgba(0, 0, 0, 0.05),
+        inset 10px 10px 20px rgba(255, 255, 255, 0.5),
+        0 20px 40px rgba(56, 189, 248, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    animation: floatOrb 20s infinite ease-in-out;
+}
+
+.orb-lg {
+    width: 300px; height: 300px;
+    top: -100px; left: -100px;
+    opacity: 0.6;
+    animation-delay: 0s;
+}
+
+.orb-md {
+    width: 180px; height: 180px;
+    top: 40%; right: -50px;
+    opacity: 0.5;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(125, 211, 252, 0.4) 60%, rgba(14, 165, 233, 0.6) 100%);
+    animation-delay: -5s;
+    animation-duration: 25s;
+}
+
+.orb-sm {
+    width: 100px; height: 100px;
+    bottom: 10%; left: 15%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.95), rgba(186, 230, 253, 0.6) 50%, rgba(2, 132, 199, 0.8) 100%);
+    opacity: 0.7;
+    animation-delay: -10s;
+    animation-duration: 18s;
+}
+
+/* Floating Icons (Recruitment Theme) */
+.floating-element {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.15);
+    border-radius: 20px;
+    color: var(--primary);
+    animation: floatIcon 15s infinite ease-in-out;
+    z-index: -1;
+}
+
+.float-search {
+    width: 60px; height: 60px;
+    top: 20%; right: 15%;
+    border-radius: 50%;
+    transform: rotate(15deg);
+    animation-delay: -2s;
+}
+
+.float-user {
+    width: 50px; height: 50px;
+    top: 60%; left: 8%;
+    border-radius: 14px;
+    animation-delay: -7s;
+    color: var(--accent);
+}
+
+.float-case {
+    width: 70px; height: 70px;
+    bottom: 25%; right: 25%;
+    border-radius: 18px;
+    transform: rotate(-10deg);
+    animation-delay: -4s;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes floatOrb {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-40px) scale(1.05); }
+}
+
+@keyframes floatIcon {
+    0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+    50% { transform: translateY(-20px) rotate(var(--r-to, 5deg)); }
 }
 
