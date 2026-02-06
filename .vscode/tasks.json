@@ -9,6 +9,16 @@
 				"d:\\github\\React\\recruitment\\style.css"
 			],
 			"group": "build"
+		},
+		{
+			"label": "append_styles_management",
+			"type": "shell",
+			"command": "echo \"\n/* Management Card Specific Customizations */\n.management-card .service-mini-card::before {\n    background: var(--accent);\n}\n\n.management-card .service-mini-card:hover {\n    border-color: rgba(245, 158, 11, 0.3);\n    box-shadow: 0 12px 24px -8px rgba(245, 158, 11, 0.15);\n}\n\n.management-card .service-mini-card:hover .mini-icon-box {\n    background: rgba(245, 158, 11, 0.1);\n    color: var(--accent);\n}\n\" >> d:\\github\\React\\recruitment\\style.css",
+			"args": [
+				"d:\\github\\React\\recruitment\\style.css"
+			],
+			"isBackground": false,
+			"group": "build"
 		}
 	]
 }

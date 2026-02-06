@@ -150,7 +150,11 @@ ul { list-style: none; }
     justify-self: center; 
     display: flex; gap: 48px; 
 }
-.navbar .btn { justify-self: end; }
+.navbar .btn { 
+    justify-self: end; 
+    padding: 10px 24px;
+    font-size: 0.9rem;
+}
 
 .nav-links a {
     font-weight: 500;
@@ -1171,5 +1175,20 @@ body {
 @keyframes floatIcon {
     0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
     50% { transform: translateY(-20px) rotate(var(--r-to, 5deg)); }
+}
+
+/* Management Card Specific Customizations */
+.management-card .service-mini-card::before {
+    background: var(--accent);
+}
+
+.management-card .service-mini-card:hover {
+    border-color: rgba(245, 158, 11, 0.3);
+    box-shadow: 0 12px 24px -8px rgba(245, 158, 11, 0.15);
+}
+
+.management-card .service-mini-card:hover .mini-icon-box {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--accent);
 }
 
