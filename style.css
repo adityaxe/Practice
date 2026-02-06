@@ -207,97 +207,124 @@ ul { list-style: none; }
     color: var(--primary);
 }
 
-/* Hero Section */
+/* Hero Section - Ultra Premium & Modular */
 .hero-section {
     min-height: 100vh;
     padding-top: 180px;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
     display: flex;
     align-items: center;
-    background-image: 
-        radial-gradient(40% 40% at 10% 20%, rgba(37, 99, 235, 0.08) 0%, transparent 100%),
-        radial-gradient(40% 40% at 90% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 100%);
+    position: relative;
+    /* Sophisticated light play background */
+    background: 
+        radial-gradient(circle at 15% 50%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
 }
 
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 32px;
     align-items: stretch;
     position: relative;
-    max-width: 1200px; /* Ensure it doesn't stretch too wide */
+    max-width: 1280px; 
     margin: 0 auto;
+    perspective: 1000px; /* 3D context */
 }
 
 .landing-card {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Push content to bottom */
+    justify-content: flex-end; 
     align-items: flex-start;
-    padding: 60px 48px;
-    min-height: 520px;
+    padding: 64px 56px;
+    min-height: 600px;
     position: relative;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 24px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     
+    /* Ultra Premium Glass Border */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 32px;
+    
+    /* Setup for background images */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Reset glass effect that might conflict */
     background-color: var(--bg-main); 
+    
+    /* Deep Shadow for Float Effect */
+    box-shadow: 
+        0 20px 40px -10px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset; /* Inner light ring */
 }
 
+/* Sophisticated Dark Gradient Overlay */
 .landing-card::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
+    /* Richer gradients using primary tones */
     background: linear-gradient(to top, 
         rgba(2, 6, 23, 0.95) 0%, 
         rgba(15, 23, 42, 0.6) 50%, 
-        rgba(15, 23, 42, 0.1) 100%);
+        rgba(30, 58, 138, 0.2) 100%);
     z-index: 1;
-    transition: all 0.5s ease;
+    transition: all 0.6s ease;
 }
 
+/* Hover State - Ultra Premium Glow */
 .landing-card:hover::before {
     background: linear-gradient(to top, 
         rgba(30, 58, 138, 0.95) 0%, 
         rgba(30, 58, 138, 0.5) 60%, 
-        rgba(30, 58, 138, 0.1) 100%);
-    opacity: 1;
-    backdrop-filter: blur(2px);
+        rgba(37, 99, 235, 0.2) 100%);
+    backdrop-filter: blur(4px);
 }
 
-.landing-card h2, .landing-card p, .landing-card .btn, .landing-card .bg-icon {
+.landing-card:hover {
+    transform: translateY(-16px) scale(1.01);
+    box-shadow: 
+        0 30px 60px -12px rgba(37, 99, 235, 0.25),
+        0 0 0 2px rgba(255, 255, 255, 0.5); /* Glowing border */
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Modular Content Block inside Card */
+.landing-card h2, .landing-card p, .landing-card .btn {
     position: relative;
-    z-index: 2;
+    z-index: 10;
 }
 
 .landing-card h2 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 4rem;
+    margin-bottom: 24px;
     color: white;
     font-weight: 800;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    letter-spacing: -0.03em;
-    line-height: 1;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transform: translateY(0);
+    transition: transform 0.6s ease;
 }
 
 .landing-card p {
-    font-size: 1.25rem;
-    color: rgba(255,255,255,0.95);
-    margin-bottom: 40px;
-    max-width: 440px;
+    font-size: 1.35rem;
+    color: rgba(226, 232, 240, 0.9);
+    margin-bottom: 48px;
+    max-width: 480px;
     font-weight: 500;
     line-height: 1.6;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    transform: translateY(0);
+    transition: transform 0.6s ease 0.1s;
 }
 
+.landing-card:hover h2 { transform: translateY(-5px); }
+.landing-card:hover p { transform: translateY(-5px); color: white; }
+
 .landing-card .btn {
-    padding: 16px 40px;
+    padding: 18px 48px;
     font-size: 1rem;
     background: white;
     color: var(--primary);
@@ -318,60 +345,83 @@ ul { list-style: none; }
     background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1600&q=80');
 }
 
+.landing-card:hover { /* Handled in the block above for simpler edit, removing this duplicate block to avoid conflict but I already edited the block above to include hover states. Wait, I should replace lines 322-326 in the original file which were:
 .landing-card:hover {
     transform: translateY(-12px) scale(1.02);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     border-color: rgba(255,255,255,0.4);
 }
+*/
+    /* This block is intentionally left empty or minimal as the hover state was defined in the previous replace_file call's newString. 
+       However, to clean up the file I will replace it with the new hover logic effectively overwriting it. 
+    */
+    transform: translateY(-16px) scale(1.01);
+    box-shadow: 
+        0 30px 60px -12px rgba(37, 99, 235, 0.25),
+        0 0 0 2px rgba(255, 255, 255, 0.5); 
+    border-color: rgba(255, 255, 255, 0.8);
+}
 
 .landing-card .bg-icon {
     position: absolute;
-    right: -20px;
-    top: -20px; /* Moved to top right */
+    right: -24px;
+    top: -24px;
     bottom: auto;
-    width: 250px;
-    height: 250px;
-    opacity: 0.1; /* Slightly more visible on dark bg */
+    width: 320px; /* Much larger */
+    height: 320px;
+    opacity: 0.05; 
     z-index: 1;
-    transform: none;
-    transition: var(--transition-smooth);
     color: white;
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.2));
+    transition: all 0.8s ease;
 }
 
 .landing-card:hover .bg-icon {
-    transform: rotate(0) scale(1.1);
-    opacity: 0.1;
+    transform: rotate(-10deg) scale(1.2);
+    opacity: 0.15;
+    color: var(--accent); /* Glows accent color on hover */
 }
 
-/* Hero Content */
+/* Hero Content - Ultra Modern Typography */
 .hero-content { 
     text-align: center; 
     z-index: 2; 
     padding: 0 20px; 
     display: block; 
-    margin-bottom: 60px;
+    margin-bottom: 80px; /* More breathing room */
     margin-top: 40px;
 }
 
 .hero-content h1 {
-    font-size: 4.5rem;
-    margin-bottom: 24px;
-    letter-spacing: -0.04em;
-    line-height: 1.1;
-    background: radial-gradient(circle at top left, var(--text-heading), #475569);
-    background-clip: text;
+    font-size: 5.5rem; /* Massive Premium Heading */
+    margin-bottom: 32px;
+    letter-spacing: -0.05em;
+    line-height: 1.05;
+    
+    /* Ultra Premium Gradient Text */
+    background: linear-gradient(135deg, #0f172a 0%, #3b82f6 50%, #0f172a 100%);
+    background-size: 200% auto;
+    animation: gradientText 5s ease infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 40px rgba(0,0,0,0.1);
+    
+    text-shadow: 0 20px 60px rgba(37, 99, 235, 0.15);
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .hero-content p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--text-body);
     margin-bottom: 48px;
-    max-width: 520px;
+    max-width: 680px;
     margin-left: auto; margin-right: auto;
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 1.6;
 }
 
 .hero-buttons { display: flex; justify-content: center; gap: 20px; }
