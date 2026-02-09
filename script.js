@@ -38,6 +38,48 @@ document.addEventListener('DOMContentLoaded', () => {
         item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(item);
     });
+
+    // Stats Counter Animation
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const originalText = target.innerText;
+                const value = parseInt(originalText.replace(/,/g, '')); // Remove commas if any
+                const suffix = originalText.replace(/[0-9.,]/g, ''); // Keep suffixes like K+ or %
+
+                if (isNaN(value)) return;
+
+                let start = 0;
+                const duration = 2000; // 2 seconds
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    // Ease out expo
+                    const ease = 1 === progress ? 1 : 1 - Math.pow(2, -10 * progress);
+                    
+                    const current = Math.floor(ease * value);
+                    target.innerText = current + suffix;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        target.innerText = originalText; // Restore original to ensure accuracy
+                    }
+                }
+
+                requestAnimationFrame(update);
+                observer.unobserve(target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.hero-stat strong').forEach(stat => {
+        statsObserver.observe(stat);
+    });
 });
 
 // Form Switching Logic (exposed globally for onclick handlers)
