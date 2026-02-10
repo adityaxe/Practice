@@ -221,7 +221,7 @@ ul { list-style: none; }
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: radial-gradient(ellipse at 50% 0%, #ffffff 0%, #f8fafc 40%, #e2e8f0 100%);
+    /* background: radial-gradient(ellipse at 50% 0%, #ffffff 0%, #f8fafc 40%, #e2e8f0 100%); */
 }
 
 /* Ambient glow blobs */
@@ -376,7 +376,7 @@ ul { list-style: none; }
     border-radius: 100px;
     padding: 20px 48px;
     max-width: 800px;
-    margin: 180px auto 0;
+    margin: 80px auto 0;
     position: relative;
     z-index: 2;
     box-shadow: 0 10px 40px rgba(0,0,0,0.05);
@@ -520,8 +520,8 @@ ul { list-style: none; }
     width: 100px;
     height: 100px;
     border-radius: 24px;
-    background: radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.6), rgba(37, 99, 235, 0.3));
-    box-shadow: 0 0 60px rgba(139, 92, 246, 0.4);
+    background: radial-gradient(circle at 40% 40%, rgba(37, 99, 235, 0.6), rgba(37, 99, 235, 0.3));
+    box-shadow: 0 0 60px rgba(37, 99, 235, 0.4);
     position: relative;
     overflow: hidden;
 }
@@ -1584,16 +1584,40 @@ body {
     color: var(--accent);
 }
 
+/* Modular Grid Background */
+.modular-grid-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: 50px 50px;
+    background-image: 
+        linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+    z-index: -1;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+}
+
+.floating-plus {
+    position: absolute;
+    color: rgba(37, 99, 235, 0.2);
+    font-weight: 300;
+    font-family: monospace;
+    user-select: none;
+    pointer-events: none;
+    z-index: -1;
+}
+
 /* New Decorative Sphere for Hero Section */
 .decorative-sphere-filler {
     width: 130px; 
     height: 130px;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.95), rgba(139, 92, 246, 0.2) 45%, rgba(139, 92, 246, 0.5) 100%);
+    background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.95), rgba(37, 99, 235, 0.2) 45%, rgba(37, 99, 235, 0.5) 100%);
     box-shadow: 
         inset -10px -10px 20px rgba(0, 0, 0, 0.08),
         inset 10px 10px 20px rgba(255, 255, 255, 0.6),
-        0 25px 45px rgba(139, 92, 246, 0.3);
+        0 25px 45px rgba(37, 99, 235, 0.3);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.5);
