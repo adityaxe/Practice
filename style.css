@@ -376,7 +376,7 @@ ul { list-style: none; }
     border-radius: 100px;
     padding: 20px 48px;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 180px auto 0;
     position: relative;
     z-index: 2;
     box-shadow: 0 10px 40px rgba(0,0,0,0.05);
@@ -1565,5 +1565,20 @@ body {
 .management-card .service-mini-card:hover .mini-icon-box {
     background: rgba(245, 158, 11, 0.1);
     color: var(--accent);
+}
+
+/* New Decorative Sphere for Hero Section */
+.decorative-sphere-filler {
+    width: 130px; 
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.95), rgba(139, 92, 246, 0.2) 45%, rgba(139, 92, 246, 0.5) 100%);
+    box-shadow: 
+        inset -10px -10px 20px rgba(0, 0, 0, 0.08),
+        inset 10px 10px 20px rgba(255, 255, 255, 0.6),
+        0 25px 45px rgba(139, 92, 246, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
