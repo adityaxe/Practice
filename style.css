@@ -972,10 +972,11 @@ ul { list-style: none; }
     /* Grid & Flex Stacks */
     .bento-grid { display: flex; flex-direction: column; }
     .testimonial-grid { grid-template-columns: 1fr; }
-    .footer-content { flex-direction: column; gap: 40px; text-align: center; }
-    .footer-col { align-items: center; }
-    .brand-col p { margin: 16px auto 0; }
+    .footer-content { flex-direction: column; gap: 40px; text-align: left; align-items: center; }
+    .footer-col { width: 100%; max-width: 300px; }
+    .brand-col p { margin: 16px 0 0; }
     .footer-bottom { text-align: center; }
+    .footer-rights { display: block; margin-top: 4px; }
 
     .jobs-grid { grid-template-columns: 1fr; }
 
@@ -1254,9 +1255,10 @@ form.active-form {
 .icon-box svg { width: 32px; height: 32px; }
 
 .icon-primary {
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-    color: var(--primary);
-    border: 1px solid rgba(37, 99, 235, 0.1);
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5);
+    border: none;
 }
 .icon-accent {
     background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
