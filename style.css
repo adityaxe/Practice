@@ -919,10 +919,11 @@ ul { list-style: none; }
 @media (max-width: 900px) {
     /* Navbar & Menu */
     .navbar {
-        width: 100%; top: 0; left: 0; transform: none; border-radius: 0; border: none; border-bottom: 1px solid var(--border-card);
+        width: 92%; top: 16px; left: 50%; transform: translateX(-50%); border-radius: 100px; border: 1px solid rgba(255, 255, 255, 0.4);
         display: flex; justify-content: space-between; padding: 0 24px;
         background: rgba(255,255,255,0.95);
-        align-items: center; /* Ensure items trigger center alignment */
+        align-items: center;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
     }
     
     .navbar .logo-container img {
@@ -934,24 +935,29 @@ ul { list-style: none; }
     .navbar .btn { display: none; } /* Hide CTA in navbar, maybe show in menu? */
     
     .nav-links {
-        position: fixed;
-        top: var(--nav-height);
+        position: absolute; /* Relative to navbar container */
+        top: calc(100% + 8px);
         left: 0; width: 100%;
-        background: #fff;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 40px 24px;
         gap: 24px;
-        border-bottom: 1px solid var(--border-card);
-        transform: translateY(-150%);
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        z-index: 999;
+        border: 1px solid var(--border-card);
+        transform: translateY(-20px);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 998;
         box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         opacity: 0;
+        visibility: hidden; /* Hide when not active to prevent clicks */
     }
     
     .nav-links.active {
         transform: translateY(0);
         opacity: 1;
+        visibility: visible;
     }
 
     .nav-links a {
