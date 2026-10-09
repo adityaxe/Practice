@@ -1,206 +1,278 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Synergy Plus</title>
+    <title>Contact — SPBC Group</title>
+    <meta name="description" content="Talk to Synergy Plus Business Consulting Group. Brief us on a role, send your CV, or visit our Gurgaon and Dharuhera offices.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="theme-wash" id="themeWash" aria-hidden="true"></div>
-    <div class="mesh-background">
+    <div class="mode-sweep" id="modeSweep" aria-hidden="true"></div>
 
-        <div class="shape-orb orb-lg"></div>
-        <div class="shape-orb orb-md"></div>
-        <div class="shape-orb orb-sm"></div>
-    </div>
-
-    <nav class="navbar">
-        <a href="index.html" class="logo-container">
-            <img src="Assets/logo.png" alt="Synergy Plus Business Consulting" class="logo-img">
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="founder.html">About us</a></li>
-            <li><a href="contact.html" style="color: var(--primary);">Contact</a></li>
-        </ul>
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    <nav class="nav" id="nav">
+        <div class="wrap nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="SPBC Group home">
+                <img src="Assets/logo.png" alt="Synergy Plus Business Consulting Group">
+            </a>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="founder.html">About</a></li>
+                <li><a href="contact.html" class="is-active">Contact</a></li>
+            </ul>
+            <div class="mode-switch" role="group" aria-label="Choose your view">
+                <button class="mode-switch__btn" data-mode-set="hire" type="button">I'm hiring</button>
+                <button class="mode-switch__btn" data-mode-set="candidate" type="button">I'm looking</button>
+            </div>
+            <a href="contact.html" class="btn btn--ink nav__cta">Talk to us</a>
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
-    <section class="contact-section">
-        <div class="container">
-            <div class="section-header fade-in-up">
-                <h2>Get in Touch</h2>
-                <p>Ready to start your journey? Choose your path below.</p>
-            </div>
+    <header class="page-head">
+        <div class="page-head__bg" aria-hidden="true">
+            <div class="bg-aurora bg-aurora--a"></div>
+            <div class="bg-dots"></div>
+            <div class="bg-grain"></div>
+        </div>
+        <div class="wrap">
+            <span class="eyebrow fade-up">Contact</span>
+            <h1 class="display-xl fade-up d1" style="max-width:15ch;">Start with a conversation.</h1>
+            <p class="lede fade-up d2" style="font-size:1.2rem;">Fill in whichever form fits. It reaches a consultant directly — not a queue — and we come back within one working day.</p>
+        </div>
+    </header>
 
-            <div class="trust-row fade-in-up">
-                <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> We reply within 24 hours</div>
-                <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Your data stays confidential</div>
-                <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg> No spam, ever</div>
-            </div>
-
-            <div class="form-wrapper fade-in-up delay-1">
-
-                <div class="form-toggle">
-                    <button class="toggle-btn active" onclick="switchForm('candidate')" data-wash="candidate">I'm a Candidate</button>
-                    <button class="toggle-btn" onclick="switchForm('employer')" data-wash="hire">I'm an Employer</button>
-                    <div class="toggle-indicator"></div>
+    <section class="section" style="padding-top:20px;">
+        <div class="wrap" style="display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:start;">
+            <div class="reveal">
+                <div class="trust-strip">
+                    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Reply within one working day</div>
+                    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Details kept confidential</div>
+                    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg> Never a fee for candidates</div>
                 </div>
 
+                <div class="form-card">
+                    <div class="form-tabs" role="tablist">
+                        <button class="form-tab is-active" data-form-tab="candidate" type="button" role="tab">I'm looking for work</button>
+                        <button class="form-tab" data-form-tab="employer" type="button" role="tab">I'm hiring</button>
+                    </div>
 
-                <form id="candidate-form" class="active-form">
-                    <div class="form-grid">
-                        <div class="input-group">
-                            <label>Full Name</label>
-                            <input type="text" placeholder="John Doe" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Email Address</label>
-                            <input type="email" placeholder="john@example.com" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Phone Number</label>
-                            <input type="tel" placeholder="+91 99999 99999">
-                        </div>
-                        <div class="input-group">
-                            <label>Current Role</label>
-                            <input type="text" placeholder="e.g. Product Designer">
-                        </div>
-                        <div class="input-group full-width">
-                            <label>Resume / CV</label>
-                            <div class="file-upload-box">
-                                <input type="file" id="cv-upload" accept=".pdf,.doc,.docx">
-                                <div class="upload-content">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-                                    <span>Upload your CV (PDF, DOC)</span>
+                    <form data-form="candidate" class="is-active">
+                        <div class="field-grid">
+                            <div class="field">
+                                <label for="c-name">Full name</label>
+                                <input id="c-name" type="text" placeholder="Your name" required>
+                            </div>
+                            <div class="field">
+                                <label for="c-email">Email</label>
+                                <input id="c-email" type="email" placeholder="you@example.com" required>
+                            </div>
+                            <div class="field">
+                                <label for="c-phone">Phone</label>
+                                <input id="c-phone" type="tel" placeholder="+91 ">
+                            </div>
+                            <div class="field">
+                                <label for="c-role">Current role</label>
+                                <input id="c-role" type="text" placeholder="e.g. Production Supervisor">
+                            </div>
+                            <div class="field">
+                                <label for="c-exp">Years of experience</label>
+                                <select id="c-exp">
+                                    <option>0 – 2 years</option>
+                                    <option>3 – 5 years</option>
+                                    <option>6 – 10 years</option>
+                                    <option>11 – 20 years</option>
+                                    <option>20+ years</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="c-sector">Preferred sector</label>
+                                <select id="c-sector">
+                                    <option>Manufacturing &amp; Engineering</option>
+                                    <option>Automotive</option>
+                                    <option>IT &amp; Technology</option>
+                                    <option>FMCG &amp; Retail</option>
+                                    <option>Logistics &amp; Supply Chain</option>
+                                    <option>BFSI</option>
+                                    <option>Facilities &amp; Security</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="field field--full">
+                                <label for="c-cv">Resume / CV</label>
+                                <div class="drop">
+                                    <input id="c-cv" type="file" accept=".pdf,.doc,.docx">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                    <span>Attach your CV — PDF or Word</span>
                                 </div>
                             </div>
+                            <div class="field field--full">
+                                <label for="c-msg">Anything we should know?</label>
+                                <textarea id="c-msg" rows="4" placeholder="Notice period, preferred location, what you're looking for next..."></textarea>
+                            </div>
                         </div>
-                        <div class="input-group full-width">
-                            <label>Message (Optional)</label>
-                            <textarea rows="4" placeholder="Tell us about your career goals..."></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">Submit Application</button>
-                </form>
+                        <button type="submit" class="btn btn--solid btn--lg" style="width:100%;">Send my details</button>
+                    </form>
 
-
-                <form id="employer-form">
-                    <div class="form-grid">
-                        <div class="input-group">
-                            <label>Company Name</label>
-                            <input type="text" placeholder="Tech Co." required>
+                    <form data-form="employer">
+                        <div class="field-grid">
+                            <div class="field">
+                                <label for="e-company">Company name</label>
+                                <input id="e-company" type="text" placeholder="Your company" required>
+                            </div>
+                            <div class="field">
+                                <label for="e-name">Your name</label>
+                                <input id="e-name" type="text" placeholder="Contact person" required>
+                            </div>
+                            <div class="field">
+                                <label for="e-email">Work email</label>
+                                <input id="e-email" type="email" placeholder="you@company.com" required>
+                            </div>
+                            <div class="field">
+                                <label for="e-phone">Phone</label>
+                                <input id="e-phone" type="tel" placeholder="+91 ">
+                            </div>
+                            <div class="field">
+                                <label for="e-service">What do you need?</label>
+                                <select id="e-service">
+                                    <option>Recruitment &amp; staffing</option>
+                                    <option>Payroll management</option>
+                                    <option>Compliance &amp; legal</option>
+                                    <option>Background verification</option>
+                                    <option>Management consulting</option>
+                                    <option>Corporate / facilities services</option>
+                                    <option>Accounting, audit &amp; taxation</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="e-count">Positions to fill</label>
+                                <select id="e-count">
+                                    <option>1 role</option>
+                                    <option>2 – 5 roles</option>
+                                    <option>6 – 20 roles</option>
+                                    <option>20+ / ongoing</option>
+                                    <option>Not a hiring need</option>
+                                </select>
+                            </div>
+                            <div class="field field--full">
+                                <label for="e-brief">The brief</label>
+                                <textarea id="e-brief" rows="5" placeholder="Roles, location, salary band, timeline — or just the problem you're trying to solve."></textarea>
+                            </div>
                         </div>
-                        <div class="input-group">
-                            <label>Contact Name</label>
-                            <input type="text" placeholder="Jane Smith" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Work Email</label>
-                            <input type="email" placeholder="jane@techco.com" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Phone Number</label>
-                            <input type="tel" placeholder="+91 99999 99999">
-                        </div>
-                        <div class="input-group full-width">
-                            <label>Hiring Requirements</label>
-                            <textarea rows="4" placeholder="Describe the roles you are looking for..."></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">Request Consultation</button>
-                </form>
+                        <button type="submit" class="btn btn--solid btn--lg" style="width:100%;">Request a call back</button>
+                    </form>
+                </div>
             </div>
-            <div class="contact-details-grid">
-                <div class="contact-detail"><span>Registered Office</span><strong>Gurgaon, Haryana</strong><a href="tel:+919810057943">+91-124475559 · 9810057943</a></div>
-                <div class="contact-detail"><span>Corporate Office</span><strong>Dharuhera, Haryana</strong><a href="tel:+919650560013">+91-1274294979 · 9650560013</a></div>
-                <div class="contact-detail"><span>Email</span><strong>Talk to our team</strong><a href="mailto:mdvanjani@udyogservice.in">mdvanjani@udyogservice.in</a></div>
+
+            <aside class="reveal d1">
+                <div class="map-card">
+                    <span class="eyebrow">Direct lines</span>
+                    <div class="office" style="margin-top:22px;">
+                        <span class="office__tag">Registered office</span>
+                        <h3>Gurgaon</h3>
+                        <address>724/814, Galleria Tower, Phase-IV,<br>DLF City, Haryana 122002</address>
+                        <div class="office__meta">
+                            <a href="tel:+911244755590">+91-124 475 559</a>
+                            <a href="tel:+919810057943">+91 98100 57943</a>
+                        </div>
+                    </div>
+                    <div class="office">
+                        <span class="office__tag">Corporate office</span>
+                        <h3>Dharuhera</h3>
+                        <address>Plot 5/7, Dharuhera Industrial Area,<br>Rewari, Haryana 123106</address>
+                        <div class="office__meta">
+                            <a href="tel:+911274294979">+91-1274 294 979</a>
+                            <a href="tel:+919650560013">+91 96505 60013</a>
+                        </div>
+                    </div>
+                    <div class="office">
+                        <span class="office__tag">Email</span>
+                        <h3>Write to us</h3>
+                        <div class="office__meta">
+                            <a href="mailto:mdvanjani@udyogservice.in">mdvanjani@udyogservice.in</a>
+                            <a href="https://udyoghrsolutions.in" target="_blank" rel="noopener">udyoghrsolutions.in</a>
+                            <span>Both offices open 9 hours daily</span>
+                        </div>
+                    </div>
+                    <div class="map-legend">
+                        <span><b>GST</b> 06ABHCS4149M1ZW</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="section section--surface">
+        <div class="wrap">
+            <div class="section-head reveal" style="max-width:620px;">
+                <span class="eyebrow">Before you write</span>
+                <h2 class="display-lg">Quick answers.</h2>
+            </div>
+            <div class="faq reveal d1">
+                <details open>
+                    <summary>How soon will I hear back?</summary>
+                    <p>Within one working day for both employers and candidates. If your enquiry arrives over a weekend, expect a reply on Monday.</p>
+                </details>
+                <details>
+                    <summary>I'm a candidate — will you charge me?</summary>
+                    <p>No. Candidates are never charged at any stage, for any reason. Our fees are paid by hiring organisations.</p>
+                </details>
+                <details>
+                    <summary>Can I just call instead?</summary>
+                    <p>Of course. Both offices are open nine hours a day — the Gurgaon and Dharuhera numbers are listed alongside this form.</p>
+                </details>
+                <details>
+                    <summary>What happens to my CV?</summary>
+                    <p>It is held confidentially and only shared with an employer once we have spoken to you and you have agreed to that specific application.</p>
+                </details>
             </div>
         </div>
     </section>
 
-
-    <footer class="site-footer">
-        <div class="container footer-content">
-            <div class="footer-col brand-col">
-                <a href="index.html" class="logo-container">
-                    <img src="Assets/logo.png" alt="Synergy Plus Business Consulting" class="logo-img">
-                </a>
-                <p>Connecting talent with opportunity worldwide — strategic HR and management consulting for growing businesses.</p>
-                <div class="footer-social">
-                    <a href="mailto:mdvanjani@udyogservice.in" aria-label="Email us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path></svg></a>
-                    <a href="tel:+919810057943" aria-label="Call us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a>
-                    <a href="https://udyoghrsolutions.in" target="_blank" rel="noopener" aria-label="Visit Udyog HR Solutions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4"></rect><path d="M7 17V7h2.5a2.5 2.5 0 0 1 0 5H7"></path><path d="M14 17V7l4 10V7"></path></svg></a>
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer__top">
+                <div>
+                    <div class="footer__logo"><img src="Assets/logo.png" alt="Synergy Plus Business Consulting Group"></div>
+                    <p>Recruitment, HR operations, corporate services and management consulting for businesses across India's industrial corridor and beyond.</p>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="founder.html">About &amp; leadership</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html?type=candidate">Submit your CV</a></li>
+                        <li><a href="contact.html?type=employer">Hire with us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#hr">HR &amp; Business</a></li>
+                        <li><a href="services.html#consulting">Management Consulting</a></li>
+                        <li><a href="services.html#corporate">Corporate Services</a></li>
+                        <li><a href="legal.html#privacy">Privacy &amp; Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer__contact">
+                        <li><b>Registered office</b>724/814, Galleria Tower, Phase-IV, DLF City, Gurgaon, Haryana 122002</li>
+                        <li><b>Corporate office</b>Plot 5/7, Dharuhera Industrial Area, Rewari, Haryana 123106</li>
+                        <li><b>Email</b><a href="mailto:mdvanjani@udyogservice.in">mdvanjani@udyogservice.in</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="founder.html">About</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press</a></li>
-                </ul>
+            <div class="footer__bottom">
+                <span>&copy; 2026 Synergy Plus Business Consulting Group. All rights reserved.</span>
+                <span>GST 06ABHCS4149M1ZW · Established 1 April 2014</span>
             </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">Guides</a></li>
-                    <li><a href="#">Help Center</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="legal.html#privacy">Privacy</a></li>
-                    <li><a href="legal.html#terms">Terms</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Synergy Plus Business Consulting Group. <span class="footer-rights">All rights reserved.</span></p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        function switchForm(type) {
-            const candidateForm = document.getElementById('candidate-form');
-            const employerForm = document.getElementById('employer-form');
-            const btns = document.querySelectorAll('.toggle-btn');
-            const indicator = document.querySelector('.toggle-indicator');
-
-            if (type === 'candidate') {
-                candidateForm.classList.add('active-form');
-                employerForm.classList.remove('active-form');
-                btns[0].classList.add('active');
-                btns[1].classList.remove('active');
-                indicator.style.left = '4px';
-            } else {
-                candidateForm.classList.remove('active-form');
-                employerForm.classList.add('active-form');
-                btns[0].classList.remove('active');
-                btns[1].classList.add('active');
-                // Calculate position based on button width (approx 50%)
-                indicator.style.left = 'calc(50% - 4px)';
-            }
-        }
-
-        // Check URL Params for default selection
-        window.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const type = urlParams.get('type');
-            if(type === 'employer') {
-                switchForm('employer');
-            }
-        });
-    </script>
 </body>
 </html>
-

@@ -1,508 +1,617 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steer - Agile Recruitment</title>
+    <title>Synergy Plus Business Consulting Group — HR Solutions & Management Consulting</title>
+    <meta name="description" content="SPBC Group pairs companies with vetted talent and professionals with the right roles. Recruitment, payroll, compliance, corporate services and management consulting since 2014.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="theme-wash" id="themeWash" aria-hidden="true"></div>
-    <div class="mesh-background">
+    <div class="mode-sweep" id="modeSweep" aria-hidden="true"></div>
 
-        <div class="shape-orb orb-lg"></div>
-        <div class="shape-orb orb-md"></div>
-        <div class="shape-orb orb-sm"></div>
-    </div>
-
-    <nav class="navbar">
-        <a href="#home" class="logo-container">
-            <img src="Assets/logo.png" alt="Synergy Plus Business Consulting" class="logo-img">
-        </a>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="founder.html">About us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    <nav class="nav" id="nav">
+        <div class="wrap nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="SPBC Group home">
+                <img src="Assets/logo.png" alt="Synergy Plus Business Consulting Group">
+            </a>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="index.html" class="is-active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="founder.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mode-switch" role="group" aria-label="Choose your view">
+                <button class="mode-switch__btn" data-mode-set="hire" type="button">I'm hiring</button>
+                <button class="mode-switch__btn" data-mode-set="candidate" type="button">I'm looking</button>
+            </div>
+            <a href="contact.html" class="btn btn--ink nav__cta">Talk to us</a>
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
-
-    <section id="home" class="hero-section" data-hero-interactive>
-
-        <div class="hero-glow hero-glow--blue"></div>
-        <div class="hero-glow hero-glow--amber"></div>
-        <div class="hero-glow hero-glow--purple"></div>
-
-
-        <div class="hero-float hero-float--team">
-            <svg class="hero-illustration" viewBox="0 0 200 200" width="170" height="170" fill="none">
-                <defs>
-                    <linearGradient id="nodeGradA" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stop-color="#3076d8"/>
-                        <stop offset="100%" stop-color="#7c3aed"/>
-                    </linearGradient>
-                    <linearGradient id="nodeGradB" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stop-color="#f26900"/>
-                        <stop offset="100%" stop-color="#fbbf24"/>
-                    </linearGradient>
-                </defs>
-                <g stroke="rgba(15,23,42,0.15)" stroke-width="1.5" stroke-dasharray="4 4">
-                    <line x1="100" y1="100" x2="40" y2="50"/>
-                    <line x1="100" y1="100" x2="165" y2="55"/>
-                    <line x1="100" y1="100" x2="35" y2="150"/>
-                    <line x1="100" y1="100" x2="160" y2="150"/>
-                </g>
-                <circle cx="100" cy="100" r="34" fill="url(#nodeGradA)"/>
-                <circle cx="40" cy="50" r="16" fill="url(#nodeGradB)"/>
-                <circle cx="165" cy="55" r="12" fill="#60a5fa"/>
-                <circle cx="35" cy="150" r="13" fill="#a78bfa"/>
-                <circle cx="160" cy="150" r="15" fill="url(#nodeGradA)"/>
+    <!-- ============================ HERO ============================ -->
+    <header class="hero">
+        <div class="hero__bg" aria-hidden="true">
+            <div class="bg-aurora bg-aurora--a"></div>
+            <div class="bg-aurora bg-aurora--b"></div>
+            <div class="bg-dots"></div>
+            <svg class="bg-net" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice">
+                <path id="netA" class="net-dash" d="M-60 540 C 260 500, 380 250, 720 262 S 1160 150, 1520 206"/>
+                <path id="netB" class="net-dash" d="M-60 300 C 240 330, 400 560, 760 520 S 1200 470, 1520 540"/>
+                <path id="netC" class="net-dash" d="M160 740 C 320 520, 560 430, 760 262 S 1120 60, 1280 -40"/>
+                <circle class="pulse" r="3.6">
+                    <animateMotion dur="11s" repeatCount="indefinite"><mpath href="#netA"/></animateMotion>
+                </circle>
+                <circle class="pulse" r="2.8">
+                    <animateMotion dur="14s" begin="2s" repeatCount="indefinite"><mpath href="#netB"/></animateMotion>
+                </circle>
+                <circle class="pulse" r="3.2">
+                    <animateMotion dur="13s" begin="4.5s" repeatCount="indefinite"><mpath href="#netC"/></animateMotion>
+                </circle>
             </svg>
+            <div class="bg-grain"></div>
         </div>
 
-        <div class="hero-float hero-float--stats">
-            <div class="float-card">
-                <div class="float-card__badge">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-                    Job type
+        <div class="wrap hero__grid">
+            <div class="hero__copy">
+                <div class="swap">
+                    <div class="swap-default fade-up">
+                        <span class="eyebrow">Gurgaon · Dharuhera · Since 2014</span>
+                        <h1 class="display-xl">People, process and <em>performance</em> — joined up.</h1>
+                        <p class="lede hero__lede">Synergy Plus Business Consulting Group places vetted professionals, runs payroll and compliance, and advises leadership teams on growth. One partner across the whole workforce lifecycle.</p>
+                    </div>
+                    <div class="swap-hire">
+                        <span class="eyebrow">For employers</span>
+                        <h1 class="display-xl">Hire people who <em>stay</em>.</h1>
+                        <p class="lede hero__lede">Tell us the brief. We source, screen and shortlist against your culture as well as your spec — then handle payroll, statutory filings and onboarding so nothing lands back on your desk.</p>
+                    </div>
+                    <div class="swap-candidate">
+                        <span class="eyebrow">For job seekers</span>
+                        <h1 class="display-xl">Find work that <em>fits</em>.</h1>
+                        <p class="lede hero__lede">Permanent, contract or remote — we match your experience to live mandates across manufacturing, IT, FMCG and BFSI, and stay with you through every interview round to the offer letter.</p>
+                    </div>
                 </div>
-                <div class="float-donut-row">
-                    <div class="float-donut"></div>
-                    <ul class="float-legend">
-                        <li><span class="legend-dot" style="background:#2563eb;"></span> Freelancer</li>
-                        <li><span class="legend-dot" style="background:#1e40af;"></span> Big corporation</li>
-                        <li><span class="legend-dot" style="background:#60a5fa;"></span> Start-up</li>
+
+                <div class="hero__actions fade-up d1">
+                    <a href="contact.html?type=employer" class="btn btn--solid btn--lg" data-mode-hover="hire">
+                        Start hiring
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="contact.html?type=candidate" class="btn btn--ghost btn--lg" data-mode-hover="candidate">
+                        Find a job
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </a>
+                </div>
+
+                <div class="hero__note fade-up d2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg>
+                    <span><b>GST 06ABHCS4149M1ZW</b> · Registered consultancy · Offices open 9 hours daily</span>
+                </div>
+            </div>
+
+            <div class="hero__panel fade-up d2">
+                <div class="hero__chip hero__chip--a">
+                    <div class="chip__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div>
+                        <div class="chip__k">7 days</div>
+                        <div class="chip__v">Median time<br>to shortlist</div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel__head">
+                        <span class="panel__title swap">
+                            <span class="swap-default">Live mandate</span>
+                            <span class="swap-hire">Your pipeline</span>
+                            <span class="swap-candidate">Your journey</span>
+                        </span>
+                        <span class="panel__live">Active</span>
+                    </div>
+
+                    <div class="panel__body swap">
+                        <div class="swap-default">
+                            <div class="flow__row"><div class="flow__label"><i class="flow__dot"></i>Sourced</div><div class="flow__val">248</div><div class="flow__bar"><i style="width:100%"></i></div></div>
+                            <div class="flow__row"><div class="flow__label"><i class="flow__dot"></i>Screened</div><div class="flow__val">86</div><div class="flow__bar"><i style="width:35%"></i></div></div>
+                            <div class="flow__row"><div class="flow__label"><i class="flow__dot"></i>Shortlisted</div><div class="flow__val">12</div><div class="flow__bar"><i style="width:14%"></i></div></div>
+                            <div class="flow__row"><div class="flow__label"><i class="flow__dot"></i>Offers out</div><div class="flow__val">3</div><div class="flow__bar"><i style="width:6%"></i></div></div>
+                        </div>
+                        <div class="swap-hire">
+                            <div class="flow__row"><div class="flow__label"><i class="flow__dot"></i>Brief agreed</div><div class="flow__val">Day 1</div><div class="flow__bar"><i style="width:100%"></i></div></div>
+                            <div class="flow__row"><div class="flow__label"><i class="flow__dot"></i>Sourcing &amp; screening</div><div class="flow__val">Day 2–6</div><div class="flow__bar"><i style="width:62%"></i></div></div>
+                            <div class="flow__row"><div class="flow__label"><i class="flow__dot"></i>Shortlist delivered</div><div class="flow__val">Day 7</div><div class="flow__bar"><i style="width:34%"></i></div></div>
+                            <div class="flow__row"><div class="flow__label"><i class="flow__dot"></i>Onboard &amp; payroll</div><div class="flow__val">Handled</div><div class="flow__bar"><i style="width:18%"></i></div></div>
+                        </div>
+                        <div class="swap-candidate">
+                            <div class="flow__row"><div class="flow__label"><i class="flow__dot"></i>Profile &amp; CV review</div><div class="flow__val">Free</div><div class="flow__bar"><i style="width:100%"></i></div></div>
+                            <div class="flow__row"><div class="flow__label"><i class="flow__dot"></i>Matched to mandates</div><div class="flow__val">48 hrs</div><div class="flow__bar"><i style="width:60%"></i></div></div>
+                            <div class="flow__row"><div class="flow__label"><i class="flow__dot"></i>Interview prep</div><div class="flow__val">1-to-1</div><div class="flow__bar"><i style="width:40%"></i></div></div>
+                            <div class="flow__row"><div class="flow__label"><i class="flow__dot"></i>Offer &amp; joining</div><div class="flow__val">Supported</div><div class="flow__bar"><i style="width:22%"></i></div></div>
+                        </div>
+                    </div>
+
+                    <div class="panel__foot">
+                        <span class="swap">
+                            <span class="swap-default">Across 15+ sectors</span>
+                            <span class="swap-hire">Compliance included</span>
+                            <span class="swap-candidate">No fee to candidates</span>
+                        </span>
+                        <b>100+ clients</b>
+                    </div>
+                </div>
+
+                <div class="hero__chip hero__chip--b">
+                    <div class="chip__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <div>
+                        <div class="chip__k">100%</div>
+                        <div class="chip__v">Statutory<br>compliance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================ CLIENTS ============================ -->
+    <section class="marquee-band">
+        <p class="marquee-band__label">Professionals placed with teams at</p>
+        <div class="marquee">
+            <span>ZETWERK</span><span>Amul</span><span>GATI</span><span>Tech Mahindra</span><span>TATA BlueScope Steel</span><span>Coforge</span>
+            <span>ZETWERK</span><span>Amul</span><span>GATI</span><span>Tech Mahindra</span><span>TATA BlueScope Steel</span><span>Coforge</span>
+        </div>
+    </section>
+
+    <!-- ============================ STATS ============================ -->
+    <section class="section section--tight">
+        <div class="wrap">
+            <div class="stats">
+                <div class="stat reveal">
+                    <div class="stat__num" data-count="12">12<span>+</span></div>
+                    <div class="stat__label">Years advising Indian and global businesses</div>
+                </div>
+                <div class="stat reveal d1">
+                    <div class="stat__num" data-count="100">100<span>+</span></div>
+                    <div class="stat__label">Corporate clients across the group</div>
+                </div>
+                <div class="stat reveal d2">
+                    <div class="stat__num" data-count="21">21<span></span></div>
+                    <div class="stat__label">Service lines under one roof</div>
+                </div>
+                <div class="stat reveal d3">
+                    <div class="stat__num" data-count="3">3<span></span></div>
+                    <div class="stat__label">Countries served — India, UK, Singapore</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ SERVICES ============================ -->
+    <section class="section section--surface" id="services">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">What we do</span>
+                <h2 class="display-lg">Twenty-one service lines, one accountable partner.</h2>
+                <p class="lede">Most firms hand you a recruiter and stop there. We carry the mandate through payroll, statutory filing, facilities and the board-level decisions that follow — which is why clients stay with us for years rather than roles.</p>
+            </div>
+
+            <div class="svc-grid">
+                <div class="svc-col reveal">
+                    <span class="svc-col__n">01 / Twelve lines</span>
+                    <h3>HR &amp; Business Services</h3>
+                    <p>The full employee lifecycle, from first sourcing call to final settlement.</p>
+                    <ul class="svc-list">
+                        <li><span>Recruitment &amp; Staffing <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Talent Acquisition <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>HR Consulting <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Payroll Management <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Performance Management <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Training &amp; Development <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Compliance &amp; Legal Services <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Background Verification <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Employee Relations <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>HR Technology Solutions <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Global HR Services <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Accounting, Audit &amp; Taxation <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                    </ul>
+                </div>
+
+                <div class="svc-col reveal d1">
+                    <span class="svc-col__n">02 / Boardroom</span>
+                    <h3>Management Consulting</h3>
+                    <p>Senior counsel for the decisions that change the shape of a business.</p>
+                    <ul class="svc-list">
+                        <li><span>Company Turnaround <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Growth &amp; Expansion Strategy <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Funding, Equity &amp; Loans <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Financial Modelling &amp; Advisory <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Business Process Re-engineering <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Risk Management <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                    </ul>
+                    <p style="margin-top:26px;font-size:.9rem;">Led personally by our founder, a Chartered Accountant and Company Secretary with CEO and Director experience across three countries.</p>
+                </div>
+
+                <div class="svc-col reveal d2">
+                    <span class="svc-col__n">03 / On the ground</span>
+                    <h3>Corporate Services</h3>
+                    <p>Delivered through SPBCG Product &amp; Services from our Dharuhera base.</p>
+                    <ul class="svc-list">
+                        <li><span>Electrical Services &amp; Audit <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Engineering Services <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>AMC Services &amp; Repair <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Project Management <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Sales &amp; Digital Marketing <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Security Services <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Housekeeping &amp; Cleaning <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Pest Control Services <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
+                        <li><span>Travel Services <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span></li>
                     </ul>
                 </div>
             </div>
-        </div>
 
-        <div class="hero-float hero-float--glow-orb">
-            <div class="glow-orb-visual"></div>
-        </div>
-
-
-        <svg class="hero-connectors" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M180 350 Q 200 120, 600 100" stroke="rgba(0,0,0,0.1)" stroke-width="1.5" stroke-dasharray="8 6" fill="none"/>
-            <path d="M600 100 Q 1000 80, 1050 200" stroke="rgba(0,0,0,0.1)" stroke-width="1.5" stroke-dasharray="8 6" fill="none"/>
-        </svg>
-
-        <div class="container">
-            <div class="hero-content fade-in-up">
-                <div class="badge">SPBC Group · Since 2014 · 500+ Companies Served</div>
-                <div class="hero-copy-stack">
-                    <div class="hero-copy hero-copy--default is-active">
-                        <h1>Agile Recruitment For<br>Today's World Of Work</h1>
-                        <p>An all-encompassing remote hiring solution to help modern businesses grow with Strategic HR &amp; Management Consulting — from the first job post to the signed offer letter.</p>
-                    </div>
-                    <div class="hero-copy hero-copy--hire">
-                        <span class="hero-mode-badge hero-mode-badge--hire">For Employers</span>
-                        <h1>Build Your Dream Team,<br>Faster Than Ever</h1>
-                        <p>Tell us what great looks like. We'll screen, shortlist, and deliver vetted talent — with payroll, compliance, and onboarding handled end-to-end.</p>
-                    </div>
-                    <div class="hero-copy hero-copy--candidate">
-                        <span class="hero-mode-badge hero-mode-badge--candidate">For Job Seekers</span>
-                        <h1>Your Next Career<br>Move Starts Here</h1>
-                        <p>From resume to offer letter, we match your skills with roles at 500+ companies actively hiring — and we stay with you through every interview.</p>
-                    </div>
-                </div>
-                <div class="hero-toggle-frame">
-                    <a href="contact.html?type=employer" class="hero-toggle-btn active" data-wash="hire">
-                        <span>Start Hiring</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                    <a href="contact.html?type=candidate" class="hero-toggle-btn" data-wash="candidate">
-                        <span>Find a Job</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="hero-stats fade-in-up">
-            <div class="hero-stat">
-                <strong>500+</strong>
-                <span>Companies Served</span>
-            </div>
-            <div class="hero-stat__divider"></div>
-            <div class="hero-stat">
-                <strong>10K+</strong>
-                <span>Placements Made</span>
-            </div>
-            <div class="hero-stat__divider"></div>
-            <div class="hero-stat">
-                <strong>98%</strong>
-                <span>Client Satisfaction</span>
-            </div>
-            <div class="hero-stat__divider"></div>
-            <div class="hero-stat">
-                <strong>15+</strong>
-                <span>Industries Covered</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="logos-section">
-        <p class="marquee-label">Trusted by fast-growing teams across India</p>
-        <div class="marquee-content">
-            <span>ZETWERK</span>
-            <span>Amul</span>
-            <span>GATI</span>
-            <span>Tech Mahindra</span>
-            <span>TATA BlueScope Steel</span>
-            <span>Coforge</span>
-            <span>ZETWERK</span>
-            <span>Amul</span>
-            <span>GATI</span>
-            <span>Tech Mahindra</span>
-            <span>TATA BlueScope Steel</span>
-            <span>Coforge</span>
-        </div>
-    </section>
-
-    <section id="services" class="features-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Our Services</h2>
-                <p>Comprehensive HR Solutions &amp; Management Consulting — one partner, end to end. We handle the full lifecycle of your workforce so your leadership team can focus on the business, not the paperwork.</p>
-            </div>
-
-            <div class="bento-grid services-grid">
-                 <div class="bento-item item-large service-category-card reveal">
-                    <div class="card-header">
-                        <div class="icon-box icon-primary">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                        </div>
-                        <h3>HR Solutions</h3>
-                    </div>
-                    <div class="service-list-grid">
-                        <div class="service-mini-card">
-                            <div class="mini-icon-box">
-                                <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                            </div>
-                            <div class="mini-content">
-                                <span>Talent Acquisition</span>
-                                <small>Executive search & headhunting for leadership roles.</small>
-                            </div>
-                        </div>
-                        <div class="service-mini-card">
-                            <div class="mini-icon-box">
-                                <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
-                            </div>
-                            <div class="mini-content">
-                                <span>Payroll Management</span>
-                                <small>Seamless salaries, taxes, and benefits processing.</small>
-                            </div>
-                        </div>
-                        <div class="service-mini-card">
-                            <div class="mini-icon-box">
-                                <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                            </div>
-                            <div class="mini-content">
-                                <span>Compliance & Legal</span>
-                                <small>Full regulatory adherence and risk mitigation.</small>
-                            </div>
-                        </div>
-                        <div class="service-mini-card">
-                            <div class="mini-icon-box">
-                                <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                            </div>
-                            <div class="mini-content">
-                                <span>HR Consulting</span>
-                                <small>Strategic policies to build great company culture.</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bento-item item-large service-category-card management-card reveal d1">
-                    <div class="card-header">
-                         <div class="icon-box icon-accent">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                        </div>
-                        <h3>Management Consulting</h3>
-                    </div>
-                    <div class="service-list-grid">
-                        <div class="service-mini-card">
-                            <div class="mini-icon-box">
-                                <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-                            </div>
-                            <div class="mini-content">
-                                <span>Company Turnaround</span>
-                                <small>Revitalizing underperforming business units.</small>
-                            </div>
-                        </div>
-                        <div class="service-mini-card">
-                            <div class="mini-icon-box">
-                                <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"></path></svg>
-                            </div>
-                            <div class="mini-content">
-                                <span>Growth Strategies</span>
-                                <small>Data-driven plans for organic and inorganic expansion.</small>
-                            </div>
-                        </div>
-                        <div class="service-mini-card">
-                            <div class="mini-icon-box">
-                                <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                            </div>
-                            <div class="mini-content">
-                                <span>Funding & Equity</span>
-                                <small>Securing capital through loans, VC, and diverse channels.</small>
-                            </div>
-                        </div>
-                        <div class="service-mini-card">
-                            <div class="mini-icon-box">
-                                <svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                            </div>
-                            <div class="mini-content">
-                                <span>Risk Management</span>
-                                <small>Identifying and mitigating operational vulnerabilities.</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="why-us" class="why-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Why Businesses &amp; Talent Choose Us</h2>
-                <p>Twelve years of hands-on HR and management consulting, distilled into a process that simply works.</p>
-            </div>
-            <div class="why-grid">
-                <div class="value-card reveal">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-                    </div>
-                    <h3>Speed Without Shortcuts</h3>
-                    <p>A pre-vetted talent network and structured screening gets you a shortlist in days, not months.</p>
-                </div>
-                <div class="value-card reveal d1">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    </div>
-                    <h3>Compliance Built In</h3>
-                    <p>Payroll, statutory filings, and labour law adherence are handled in-house, so risk never lands on your desk.</p>
-                </div>
-                <div class="value-card reveal d2">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                    </div>
-                    <h3>Pan-India &amp; Global Reach</h3>
-                    <p>Teams on the ground in Gurgaon and Dharuhera, with placements delivered across India, the UK, and Singapore.</p>
-                </div>
-                <div class="value-card reveal d3">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                    </div>
-                    <h3>Partnership, Not Transactions</h3>
-                    <p>A dedicated account manager stays engaged long after the offer letter is signed — for employers and candidates alike.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="industries" class="industries-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Industries We Serve</h2>
-                <p>Deep sector expertise across the industries driving India's economy.</p>
-            </div>
-            <div class="industries-grid">
-                <div class="industry-chip reveal">
-                    <div class="mini-icon-box"><svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4Z"></path></svg></div>
-                    <span>Manufacturing &amp; Engineering</span>
-                </div>
-                <div class="industry-chip reveal d1">
-                    <div class="mini-icon-box"><svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line></svg></div>
-                    <span>IT &amp; Technology</span>
-                </div>
-                <div class="industry-chip reveal d2">
-                    <div class="mini-icon-box"><svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></div>
-                    <span>FMCG &amp; Retail</span>
-                </div>
-                <div class="industry-chip reveal d3">
-                    <div class="mini-icon-box"><svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
-                    <span>Logistics &amp; Supply Chain</span>
-                </div>
-                <div class="industry-chip reveal">
-                    <div class="mini-icon-box"><svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
-                    <span>BFSI</span>
-                </div>
-                <div class="industry-chip reveal d1">
-                    <div class="mini-icon-box"><svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
-                    <span>Healthcare</span>
-                </div>
-                <div class="industry-chip reveal d2">
-                    <div class="mini-icon-box"><svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"></path><path d="M5 21V5l7-3 7 3v16"></path><path d="M9 21v-4h6v4"></path></svg></div>
-                    <span>Infrastructure &amp; Real Estate</span>
-                </div>
-                <div class="industry-chip reveal d3">
-                    <div class="mini-icon-box"><svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle><path d="M5 17H3v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2"></path><path d="M9 17h6"></path></svg></div>
-                    <span>Automotive</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="process" class="process-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>How It Works</h2>
-                <p>Simple steps to find your next great opportunity.</p>
-            </div>
-            <div class="process-steps">
-                <div class="step-card reveal">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3>Create Profile</h3>
-                        <p>Sign up and tell us about your skills and experience.</p>
-                    </div>
-                </div>
-                <div class="step-card reveal d1">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3>Get Matched</h3>
-                        <p>Our consultants match you with vetted, relevant opportunities.</p>
-                    </div>
-                </div>
-                <div class="step-card reveal d2">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3>Interview</h3>
-                        <p>Connect directly with employers and show your talent.</p>
-                    </div>
-                </div>
-                <div class="step-card reveal d3">
-                    <div class="step-number">04</div>
-                    <div class="step-content">
-                        <h3>Get Hired</h3>
-                        <p>Secure your dream role and start working — we stay on for onboarding.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="leadership-teaser">
-        <div class="container">
-            <div class="leadership-card reveal">
-                <div class="leadership-avatar">MV</div>
-                <div>
-                    <blockquote>"Excellence is not just a skill, it's an attitude. We build partnerships that last a lifetime."</blockquote>
-                    <cite>Mr. Vanjani — Founder &amp; CEO, SPBC Group</cite>
-                </div>
-                <a href="founder.html" class="btn btn-secondary">Meet the Leadership →</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>What People Say</h2>
-                <p>Success stories from efficient hiring pairings.</p>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card reveal">
-                    <p>"Synergy Plus transformed our hiring process. We found an incredible lead developer within 2 weeks."</p>
-                    <div class="user-info-row">
-                        <div class="testimonial-avatar" style="background: var(--primary);">SJ</div>
-                        <div class="user-info-text">
-                            <strong>Sarah Jenkins</strong>
-                            <span>CTO, TechFlow</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal d1">
-                    <p>"The best recruitment experience I've had. Professional, quick, and matched me with a perfect role."</p>
-                    <div class="user-info-row">
-                        <div class="testimonial-avatar" style="background: #7c3aed;">MC</div>
-                        <div class="user-info-text">
-                            <strong>Michael Chen</strong>
-                            <span>Senior Product Manager</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal d2">
-                    <p>"Their payroll and compliance support took a huge operational burden off our team. Genuinely reliable partners."</p>
-                    <div class="user-info-row">
-                        <div class="testimonial-avatar" style="background: var(--accent);">PR</div>
-                        <div class="user-info-text">
-                            <strong>Priya Raman</strong>
-                            <span>HR Manager, Horizon Textiles</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-banner">
-        <div class="container">
-            <div class="cta-banner-inner reveal-scale">
-                <h2>Ready to move forward?</h2>
-                <p>Whether you're scaling a team or searching for your next role, our consultants are ready to help — no long forms, just a conversation.</p>
-                <div class="cta-banner-buttons">
-                    <a href="contact.html?type=employer" class="btn btn-primary" data-wash="hire">I'm Hiring</a>
-                    <a href="contact.html?type=candidate" class="btn btn-secondary" data-wash="candidate">I'm Job Hunting</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <footer class="site-footer">
-        <div class="container footer-content">
-            <div class="footer-col brand-col">
-                <a href="#home" class="logo-container">
-                    <img src="Assets/logo.png" alt="Synergy Plus Business Consulting" class="logo-img">
+            <div style="margin-top:44px;">
+                <a href="services.html" class="link-arrow">See how each service works
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
-                <p>Connecting talent with opportunity worldwide — strategic HR and management consulting for growing businesses.</p>
-                <div class="footer-social">
-                    <a href="mailto:mdvanjani@udyogservice.in" aria-label="Email us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path></svg></a>
-                    <a href="tel:+919810057943" aria-label="Call us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a>
-                    <a href="https://udyoghrsolutions.in" target="_blank" rel="noopener" aria-label="Visit Udyog HR Solutions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4"></rect><path d="M7 17V7h2.5a2.5 2.5 0 0 1 0 5H7"></path><path d="M14 17V7l4 10V7"></path></svg></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="founder.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Careers</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="index.html#why-us">How We Work</a></li>
-                    <li><a href="contact.html">Help Center</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="legal.html#privacy">Privacy</a></li>
-                    <li><a href="legal.html#terms">Terms</a></li>
-                </ul>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Synergy Plus Business Consulting Group. <span class="footer-rights">All rights reserved.</span></p>
+    </section>
+
+    <!-- ============================ DUO ============================ -->
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head section-head--center reveal">
+                <span class="eyebrow eyebrow--plain">Two sides of the same desk</span>
+                <h2 class="display-lg">Which side of the table are you on?</h2>
+                <p class="lede" style="margin:0 auto;">Hover either panel — the whole site shifts to speak your language.</p>
+            </div>
+
+            <div class="duo">
+                <article class="duo__card duo__card--hire reveal" data-mode-hover="hire" data-mode-set="hire" tabindex="0">
+                    <span class="duo__tag">For employers</span>
+                    <h3>I need to hire</h3>
+                    <p>From a single plant supervisor to an entire finance function — briefed, screened and compliant.</p>
+                    <ul class="duo__points">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Shortlists in roughly a week, not a quarter</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Permanent, contract and remote staffing</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Payroll, PF/ESI and statutory filing handled</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Background verification as standard</li>
+                    </ul>
+                    <a href="contact.html?type=employer" class="btn btn--solid">Brief us on a role
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </article>
+
+                <article class="duo__card duo__card--candidate reveal d1" data-mode-hover="candidate" data-mode-set="candidate" tabindex="0">
+                    <span class="duo__tag">For job seekers</span>
+                    <h3>I'm looking for work</h3>
+                    <p>Real mandates with real employers, and a consultant who actually picks up the phone.</p>
+                    <ul class="duo__points">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> No fee, ever, at any stage</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Roles across 15+ sectors and three countries</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Interview preparation before every round</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Support through offer, notice and joining</li>
+                    </ul>
+                    <a href="contact.html?type=candidate" class="btn btn--solid">Send us your CV
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ PROCESS ============================ -->
+    <section class="section section--paper2">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">How we work</span>
+                <h2 class="display-lg">A mandate, not a job board.</h2>
+                <p class="lede">Every engagement runs the same disciplined four stages, whether it's one hire or a hundred.</p>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <span class="step__n">01</span>
+                    <h3>Understand</h3>
+                    <p>We sit with the hiring manager — or with you — to get past the job description to what the role actually needs.</p>
+                </div>
+                <div class="step reveal d1">
+                    <span class="step__n">02</span>
+                    <h3>Source &amp; screen</h3>
+                    <p>Our own network first, open market second. Every CV that reaches you has been spoken to, verified and assessed.</p>
+                </div>
+                <div class="step reveal d2">
+                    <span class="step__n">03</span>
+                    <h3>Shortlist</h3>
+                    <p>A tight, honest shortlist with our reasoning attached, plus interview coordination and candidate preparation.</p>
+                </div>
+                <div class="step reveal d3">
+                    <span class="step__n">04</span>
+                    <h3>Onboard &amp; sustain</h3>
+                    <p>Offer negotiation, joining support, then payroll and compliance running quietly in the background.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ SECTORS ============================ -->
+    <section class="section section--surface">
+        <div class="wrap">
+            <div class="section-head reveal" style="max-width:620px;">
+                <span class="eyebrow">Sectors</span>
+                <h2 class="display-lg">Where our desks are deepest.</h2>
+                <p class="lede">Built around the industrial corridor we sit in — and extended wherever our clients have grown.</p>
+            </div>
+            <div class="sectors reveal d1">
+                <span class="sector">Manufacturing &amp; Engineering</span>
+                <span class="sector">Automotive &amp; Ancillaries</span>
+                <span class="sector">IT &amp; Technology</span>
+                <span class="sector">FMCG &amp; Dairy</span>
+                <span class="sector">Logistics &amp; Supply Chain</span>
+                <span class="sector">BFSI</span>
+                <span class="sector">Steel &amp; Metals</span>
+                <span class="sector">Infrastructure &amp; Real Estate</span>
+                <span class="sector">Retail &amp; E-commerce</span>
+                <span class="sector">Healthcare &amp; Pharma</span>
+                <span class="sector">Textiles</span>
+                <span class="sector">Professional Services</span>
+                <span class="sector">Facilities &amp; Security</span>
+                <span class="sector">Travel &amp; Hospitality</span>
+                <span class="sector">Energy &amp; Utilities</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ OFFICES ============================ -->
+    <section class="section">
+        <div class="wrap">
+            <div class="offices">
+                <div class="reveal">
+                    <div class="section-head" style="margin-bottom:36px;">
+                        <span class="eyebrow">Find us</span>
+                        <h2 class="display-lg">Two offices, one team.</h2>
+                    </div>
+                    <div class="office">
+                        <span class="office__tag">Registered office</span>
+                        <h3>Synergy Plus Business Consulting Group</h3>
+                        <address>724/814, Galleria Tower, Phase-IV, DLF City,<br>Gurgaon, Haryana 122002</address>
+                        <div class="office__meta">
+                            <a href="tel:+911244755590">+91-124 475 559</a>
+                            <a href="tel:+919810057943">+91 98100 57943</a>
+                            <span>Open 9 hours daily · GST 06ABHCS4149M1ZW</span>
+                        </div>
+                    </div>
+                    <div class="office">
+                        <span class="office__tag">Corporate office</span>
+                        <h3>SPBCG Product &amp; Services (OPC) Pvt. Ltd.</h3>
+                        <address>Plot 5/7, Dharuhera Industrial Area,<br>Dharuhera, Rewari, Haryana 123106</address>
+                        <div class="office__meta">
+                            <a href="tel:+911274294979">+91-1274 294 979</a>
+                            <a href="tel:+919650560013">+91 96505 60013</a>
+                            <a href="https://udyoghrsolutions.in" target="_blank" rel="noopener">udyoghrsolutions.in</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-card reveal d1">
+                    <svg class="map-svg" viewBox="0 0 520 300" role="img" aria-label="Coverage: Gurgaon and Dharuhera offices, serving India, the UK and Singapore">
+                        <rect class="land" x="18" y="40" width="300" height="220" rx="18"/>
+                        <text x="38" y="68" opacity=".55">HARYANA CORRIDOR</text>
+
+                        <line x1="120" y1="130" x2="196" y2="196" stroke="currentColor" stroke-width="1.4" stroke-dasharray="4 5" opacity=".35"/>
+                        <circle class="pin-ring" cx="120" cy="130" r="5"/>
+                        <circle class="pin" cx="120" cy="130" r="6"/>
+                        <text x="134" y="128">Gurgaon</text>
+                        <text x="134" y="142" opacity=".6">Registered office</text>
+
+                        <circle class="pin-ring pin-ring--2" cx="196" cy="196" r="5"/>
+                        <circle class="pin" cx="196" cy="196" r="6"/>
+                        <text x="210" y="194">Dharuhera</text>
+                        <text x="210" y="208" opacity=".6">Corporate office</text>
+
+                        <path d="M318 110 C 390 70, 420 70, 470 92" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 6" opacity=".4"/>
+                        <circle class="pin" cx="470" cy="92" r="5"/>
+                        <text x="432" y="78">United Kingdom</text>
+
+                        <path d="M318 200 C 390 236, 420 236, 470 214" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 6" opacity=".4"/>
+                        <circle class="pin" cx="470" cy="214" r="5"/>
+                        <text x="444" y="238">Singapore</text>
+                    </svg>
+                    <div class="map-legend">
+                        <span><b>2</b> offices in Haryana</span>
+                        <span><b>3</b> countries of experience</span>
+                        <span><b>55 km</b> apart, one team</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ FOUNDER ============================ -->
+    <section class="section section--paper2">
+        <div class="wrap founder">
+            <div class="reveal">
+                <div class="portrait">
+                    <!-- Drop a photo at Assets/founder.jpg and it will fill this frame -->
+                    <span class="portrait__initials">MV</span>
+                    <span class="portrait__name">Mr. Vanjani</span>
+                    <span class="portrait__role">Founder &amp; Chief Executive</span>
+                </div>
+                <ul class="creds">
+                    <li><span>01</span><span>Chartered Accountant, ICAI — qualified 1977–78</span></li>
+                    <li><span>02</span><span>Company Secretary, ICSI</span></li>
+                    <li><span>03</span><span>Shri Ram College of Commerce alumnus</span></li>
+                    <li><span>04</span><span>Former CEO, Director &amp; Financial Controller</span></li>
+                </ul>
+            </div>
+
+            <div class="bio reveal d1">
+                <span class="eyebrow">Leadership</span>
+                <h2 class="display-lg" style="margin:18px 0 24px;">Four decades of professional practice behind every mandate.</h2>
+                <p>Synergy Plus Business Consulting Group was founded on 1 April 2014 across Gurgaon and Dharuhera, with a straightforward premise: the firms in India's industrial corridor deserved the same calibre of advice that large corporates buy from the big consultancies.</p>
+                <p>Our founder qualified as both a Chartered Accountant and a Company Secretary in 1977–78 after graduating from Shri Ram College of Commerce, and has since served as Secretary cum Financial Controller, Chief Executive and Director for businesses in India, the United Kingdom and Singapore. That bench of experience is what sits behind our consulting work — and why our recruitment desks understand what a finance or operations leader is actually being hired to fix.</p>
+                <blockquote class="pull-quote">To provide top professionals to the corporate world, and to help candidates realise their true potential.</blockquote>
+                <a href="founder.html" class="link-arrow">Read the full story
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ QUOTES ============================ -->
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head reveal" style="max-width:640px;">
+                <span class="eyebrow">In their words</span>
+                <h2 class="display-lg">What clients and candidates tell us.</h2>
+            </div>
+            <div class="quotes">
+                <figure class="quote reveal">
+                    <div class="quote__mark">&ldquo;</div>
+                    <p>They replaced an entire shift-supervision layer at our Dharuhera plant in under a month, and handled the PF and ESI paperwork without us asking twice.</p>
+                    <figcaption class="quote__by">
+                        <span class="quote__av" style="background:var(--blue)">RK</span>
+                        <span><strong>Ramesh Kumar</strong><span>HR Manager, auto components</span></span>
+                    </figcaption>
+                </figure>
+                <figure class="quote reveal d1">
+                    <div class="quote__mark">&ldquo;</div>
+                    <p>Payroll and compliance moved off my team's plate entirely. Three years in, we have not had a single statutory notice.</p>
+                    <figcaption class="quote__by">
+                        <span class="quote__av" style="background:var(--ink)">PS</span>
+                        <span><strong>Priya Sharma</strong><span>Operations Manager, logistics</span></span>
+                    </figcaption>
+                </figure>
+                <figure class="quote reveal d2">
+                    <div class="quote__mark">&ldquo;</div>
+                    <p>My consultant prepped me before all three interview rounds and negotiated the offer. I had not had that from any other firm.</p>
+                    <figcaption class="quote__by">
+                        <span class="quote__av" style="background:var(--orange)">AN</span>
+                        <span><strong>Placed candidate</strong><span>Finance, Gurgaon</span></span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ FAQ ============================ -->
+    <section class="section section--surface">
+        <div class="wrap">
+            <div class="section-head reveal" style="max-width:620px;">
+                <span class="eyebrow">Questions</span>
+                <h2 class="display-lg">Before you get in touch.</h2>
+            </div>
+            <div class="faq reveal d1">
+                <details open>
+                    <summary>How quickly can you deliver a shortlist?</summary>
+                    <p>For most mid-level and plant roles we come back within about a week. Senior and specialist mandates take longer because we map the market properly rather than forwarding whatever the job boards return.</p>
+                </details>
+                <details>
+                    <summary>Do candidates pay anything?</summary>
+                    <p>No. Candidates are never charged at any stage. Our fees are paid by the hiring organisation, which is the standard and the only ethical arrangement.</p>
+                </details>
+                <details>
+                    <summary>Can you run payroll without doing our recruitment?</summary>
+                    <p>Yes. Payroll management, statutory compliance, background verification and accounting are all available as standalone engagements.</p>
+                </details>
+                <details>
+                    <summary>What does "corporate services" actually cover?</summary>
+                    <p>Facilities-side work delivered from our Dharuhera company — electrical audits, engineering, AMC and repair, project management, security, housekeeping, pest control and travel. Plants often take these alongside staffing.</p>
+                </details>
+                <details>
+                    <summary>Do you work outside India?</summary>
+                    <p>We do. Our leadership has held executive roles in the United Kingdom and Singapore, and we support global HR mandates for clients operating across those markets.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ CTA ============================ -->
+    <section class="section cta-band">
+        <div class="wrap">
+            <div class="swap">
+                <div class="swap-default">
+                    <h2>Let's talk about the work.</h2>
+                    <p>Tell us whether you're building a team or looking for your next role. You'll speak to a consultant, not a form-filling queue.</p>
+                </div>
+                <div class="swap-hire">
+                    <h2>Brief us on the role.</h2>
+                    <p>Send the spec — or just the problem you're trying to solve. We'll come back with a view on the market, the salary band and a timeline.</p>
+                </div>
+                <div class="swap-candidate">
+                    <h2>Send us your CV.</h2>
+                    <p>We'll review it properly, tell you honestly where you stand, and match you against live mandates. No fee, no spam.</p>
+                </div>
+            </div>
+            <div class="hero__actions" style="margin-top:34px;">
+                <a href="contact.html?type=employer" class="btn btn--solid btn--lg" data-mode-hover="hire">I'm hiring
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="contact.html?type=candidate" class="btn btn--light btn--lg" data-mode-hover="candidate">I'm looking for work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer__top">
+                <div>
+                    <div class="footer__logo"><img src="Assets/logo.png" alt="Synergy Plus Business Consulting Group"></div>
+                    <p>Recruitment, HR operations, corporate services and management consulting for businesses across India's industrial corridor and beyond.</p>
+                    <div class="footer__social" style="margin-top:22px;">
+                        <a href="mailto:mdvanjani@udyogservice.in" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 6-10 7L2 6"></path></svg>
+                        </a>
+                        <a href="tel:+919810057943" aria-label="Phone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </a>
+                        <a href="https://udyoghrsolutions.in" target="_blank" rel="noopener" aria-label="Udyog HR Solutions">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="founder.html">About &amp; leadership</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html?type=candidate">Submit your CV</a></li>
+                        <li><a href="contact.html?type=employer">Hire with us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#hr">HR &amp; Business</a></li>
+                        <li><a href="services.html#consulting">Management Consulting</a></li>
+                        <li><a href="services.html#corporate">Corporate Services</a></li>
+                        <li><a href="legal.html#privacy">Privacy &amp; Terms</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer__contact">
+                        <li><b>Registered office</b>724/814, Galleria Tower, Phase-IV, DLF City, Gurgaon, Haryana 122002</li>
+                        <li><b>Corporate office</b>Plot 5/7, Dharuhera Industrial Area, Rewari, Haryana 123106</li>
+                        <li><b>Email</b><a href="mailto:mdvanjani@udyogservice.in">mdvanjani@udyogservice.in</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>&copy; 2026 Synergy Plus Business Consulting Group. All rights reserved.</span>
+                <span>GST 06ABHCS4149M1ZW · Established 1 April 2014</span>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-

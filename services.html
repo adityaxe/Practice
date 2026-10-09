@@ -1,257 +1,336 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Synergy Plus</title>
+    <title>Services — SPBC Group</title>
+    <meta name="description" content="Recruitment and staffing, payroll, compliance, management consulting and corporate services from Synergy Plus Business Consulting Group.">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .service-block {
-            margin-bottom: 120px;
-        }
-        .service-block:last-child {
-            margin-bottom: 60px;
-        }
-
-        .service-details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .service-card-detail {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        .service-cta {
-            margin-top: 40px;
-        }
-    </style>
 </head>
 <body>
-    <div class="theme-wash" id="themeWash" aria-hidden="true"></div>
-    <div class="mesh-background">
+    <div class="mode-sweep" id="modeSweep" aria-hidden="true"></div>
 
-        <div class="shape-orb orb-lg"></div>
-        <div class="shape-orb orb-md"></div>
-        <div class="shape-orb orb-sm"></div>
-    </div>
-
-    <nav class="navbar">
-        <a href="index.html" class="logo-container">
-            <img src="Assets/logo.png" alt="Synergy Plus Business Consulting" class="logo-img">
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html" style="color: var(--primary);">Services</a></li>
-            <li><a href="founder.html">About us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    <nav class="nav" id="nav">
+        <div class="wrap nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="SPBC Group home">
+                <img src="Assets/logo.png" alt="Synergy Plus Business Consulting Group">
+            </a>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="is-active">Services</a></li>
+                <li><a href="founder.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mode-switch" role="group" aria-label="Choose your view">
+                <button class="mode-switch__btn" data-mode-set="hire" type="button">I'm hiring</button>
+                <button class="mode-switch__btn" data-mode-set="candidate" type="button">I'm looking</button>
+            </div>
+            <a href="contact.html" class="btn btn--ink nav__cta">Talk to us</a>
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
-    <section class="hero-section" style="min-height: 50vh; padding-top: 180px; padding-bottom: 60px; display: flex; flex-direction: column; align-items: center; position: relative;">
-
-        <div class="modular-grid-bg"></div>
-
-
-        <div class="floating-plus" style="top: 20%; left: 10%; font-size: 2rem;">+</div>
-        <div class="floating-plus" style="top: 30%; right: 15%; font-size: 3rem;">+</div>
-        <div class="floating-plus" style="bottom: 20%; left: 20%; font-size: 1.5rem;">+</div>
-        <div class="floating-plus" style="top: 15%; right: 5%; font-size: 1rem;">+</div>
-
-
-        <div class="hero-glow hero-glow--blue"></div>
-        <div class="hero-glow hero-glow--amber"></div>
-        <div class="hero-glow hero-glow--purple"></div>
-
-        <div class="container">
-            <div class="hero-content fade-in-up" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <div class="badge">What We Do</div>
-                <h1>Expertise That Drives Growth</h1>
-                <p>From strategic HR frameworks to high-level management consulting, we provide the tools your business needs to excel in a competitive landscape — backed by over a decade of on-the-ground experience in Indian and global markets.</p>
-            </div>
+    <header class="page-head">
+        <div class="page-head__bg" aria-hidden="true">
+            <div class="bg-aurora bg-aurora--a"></div>
+            <div class="bg-dots"></div>
+            <div class="bg-grain"></div>
         </div>
-        <div class="hero-stats fade-in-up delay-1">
-            <div class="hero-stat"><strong>12+</strong><span>Years Active</span></div>
-            <div class="hero-stat__divider"></div>
-            <div class="hero-stat"><strong>500+</strong><span>Companies Served</span></div>
-            <div class="hero-stat__divider"></div>
-            <div class="hero-stat"><strong>15+</strong><span>Industries</span></div>
-            <div class="hero-stat__divider"></div>
-            <div class="hero-stat"><strong>98%</strong><span>Client Satisfaction</span></div>
+        <div class="wrap">
+            <span class="eyebrow fade-up">Services</span>
+            <h1 class="display-xl fade-up d1" style="max-width:16ch;">Everything a workforce needs, under one contract.</h1>
+            <p class="lede fade-up d2" style="font-size:1.2rem;">Twenty-one service lines across three divisions — recruitment and HR operations, boardroom consulting, and the corporate services that keep a facility running. Take one, or let us run the lot.</p>
         </div>
-    </section>
+    </header>
 
-    <section class="features-section" style="background: transparent;">
-        <div class="container">
-
-
-            <div class="service-block">
-                <div class="section-header" style="text-align: left; margin: 0 auto 40px 0;">
-                    <div class="icon-box icon-primary" style="margin-bottom: 24px; position: relative; z-index: 10;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                    </div>
-                    <h2>HR Solutions</h2>
-                    <p>Building the backbone of successful organizations through people-centric strategies. We handle the complexities of workforce management so you can focus on innovation.</p>
-                </div>
-
-                <div class="service-details-grid">
-                    <div class="module-card service-card-detail reveal">
-                        <h3 style="margin-bottom: 16px; color: var(--text-heading);">Talent Acquisition</h3>
-                        <p style="color: var(--text-body); margin-bottom: 24px; flex-grow: 1;">We go beyond simple matchmaking. Our rigorous screening process ensures you get candidates who not only possess the right technical skills but also align with your company culture.</p>
-                        <ul style="color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 12px;">
-                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--primary);">✓</span> Executive Search</li>
-                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--primary);">✓</span> Technical Recruitment</li>
-                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--primary);">✓</span> Remote Staffing solutions</li>
-                        </ul>
-                    </div>
-
-                    <div class="module-card service-card-detail reveal">
-                        <h3 style="margin-bottom: 16px; color: var(--text-heading);">Operations & Compliance</h3>
-                        <p style="color: var(--text-body); margin-bottom: 24px; flex-grow: 1;">Mitigate risk and streamline operations. We help set up robust HR frameworks, employee handbooks, and compliance policies tailored to your industry.</p>
-                        <ul style="color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 12px;">
-                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--primary);">✓</span> Policy Formulation</li>
-                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--primary);">✓</span> Payroll Management</li>
-                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--primary);">✓</span> Legal Compliance Audits</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="service-cta">
-                    <a href="contact.html?type=employer" class="btn btn-primary" data-wash="hire">Find Top Talent</a>
-                </div>
-            </div>
-
-
-            <div class="service-block">
-                <div class="section-header" style="text-align: left; margin: 0 auto 40px 0;">
-                    <div class="icon-box icon-accent" style="width: 60px; height: 60px; margin-bottom: 24px;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                    </div>
-                    <h2>Management Consulting</h2>
-                    <p>Strategic insights to navigate change, improve performance, and accelerate growth. We partner with leadership to solve their most critical challenges.</p>
-                </div>
-
-                <div class="service-details-grid">
-                    <div class="module-card service-card-detail reveal">
-                        <h3 style="margin-bottom: 16px; color: var(--text-heading);">Business Strategy</h3>
-                        <p style="color: var(--text-body); margin-bottom: 24px; flex-grow: 1;">Navigate complex market dynamics with our expert guidance. We help define your vision and build a roadmap for sustainable expansion and profitability.</p>
-                        <ul style="color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 12px;">
-                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--accent);">✓</span> Market Entry Strategy</li>
-                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--accent);">✓</span> Business Process Re-engineering</li>
-                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--accent);">✓</span> Digital Transformation</li>
-                        </ul>
-                    </div>
-
-                    <div class="module-card service-card-detail reveal">
-                        <h3 style="margin-bottom: 16px; color: var(--text-heading);">Financial Advisory</h3>
-                        <p style="color: var(--text-body); margin-bottom: 24px; flex-grow: 1;">Optimize your capital and secure your bottom line. Our financial experts provide deep analysis to assist in key decision-making processes.</p>
-                        <ul style="color: var(--text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 12px;">
-                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--accent);">✓</span> Financial Modeling & Analysis</li>
-                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--accent);">✓</span> Risk Assessment</li>
-                            <li style="display: flex; gap: 10px; align-items: center;"><span style="color: var(--accent);">✓</span> Cost Optimization Structures</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="service-cta">
-                    <a href="contact.html?type=employer" class="btn btn-secondary" data-wash="hire">Consult with Experts</a>
-                </div>
-            </div>
-
-            <div class="service-block corporate-services-block">
-                <div class="section-header" style="text-align: left; margin: 0 auto 40px 0;">
-                    <div class="icon-box icon-corporate" style="width: 60px; height: 60px; margin-bottom: 24px;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"></path><path d="M5 21V5l7-3 7 3v16"></path><path d="M9 21v-4h6v4"></path><path d="M8 9h1"></path><path d="M15 9h1"></path><path d="M8 13h1"></path><path d="M15 13h1"></path></svg>
-                    </div>
-                    <h2>Corporate Services</h2>
-                    <p>Operational support that keeps your workplace, projects, and customer experience moving.</p>
-                </div>
-                <div class="corporate-service-list">
-                    <span>Electrical Services &amp; Audits</span><span>Engineering Services</span><span>AMC &amp; Repair Services</span><span>Project Management</span><span>Sales &amp; Digital Marketing</span><span>Travel Services</span><span>Security Services</span><span>Housekeeping &amp; Cleaning</span><span>Pest Control Services</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Frequently Asked Questions</h2>
-                <p>Straight answers to what clients ask us most.</p>
-            </div>
-            <div class="faq-list">
-                <details class="faq-item reveal" open>
-                    <summary>How quickly can you fill an open role?</summary>
-                    <p>For most roles, we deliver a shortlist within 5–10 business days thanks to our pre-screened talent pipeline across 15+ industries.</p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>Do you handle both permanent and contract staffing?</summary>
-                    <p>Yes — we support permanent hires, contract staffing, and remote placements, all run through the same compliance-first process.</p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>What happens after a candidate is placed?</summary>
-                    <p>Our relationship doesn't end at the offer letter. We stay engaged through onboarding, payroll setup, and ongoing HR support.</p>
-                </details>
-                <details class="faq-item reveal">
-                    <summary>Do you work with companies outside India?</summary>
-                    <p>Yes. Alongside our Gurgaon and Dharuhera offices, we've delivered placements and consulting engagements across the UK and Singapore.</p>
-                </details>
+    <section class="section section--tight">
+        <div class="wrap">
+            <div class="stats">
+                <div class="stat reveal"><div class="stat__num">12</div><div class="stat__label">HR &amp; business service lines</div></div>
+                <div class="stat reveal d1"><div class="stat__num">06</div><div class="stat__label">Consulting practice areas</div></div>
+                <div class="stat reveal d2"><div class="stat__num">09</div><div class="stat__label">Corporate service lines</div></div>
+                <div class="stat reveal d3"><div class="stat__num">15<span>+</span></div><div class="stat__label">Sectors actively served</div></div>
             </div>
         </div>
     </section>
 
+    <!-- ============================ HR ============================ -->
+    <section class="section section--surface" id="hr">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">Division 01</span>
+                <h2 class="display-lg">HR &amp; Business Services</h2>
+                <p class="lede">The full employee lifecycle. We can own all of it, or slot into the parts your team would rather not carry.</p>
+            </div>
 
-    <footer class="site-footer">
-        <div class="container footer-content">
-            <div class="footer-col brand-col">
-                <a href="index.html" class="logo-container">
-                    <img src="Assets/logo.png" alt="Synergy Plus Business Consulting" class="logo-img">
+            <div class="svc-grid">
+                <div class="svc-col reveal">
+                    <span class="svc-col__n">Hiring</span>
+                    <h3>Finding people</h3>
+                    <p>Our own network first, the open market second — every CV verified before it reaches you.</p>
+                    <ul class="svc-list">
+                        <li><span>Recruitment &amp; Staffing</span></li>
+                        <li><span>Talent Acquisition &amp; Executive Search</span></li>
+                        <li><span>Permanent, Contract &amp; Remote Staffing</span></li>
+                        <li><span>Background Verification</span></li>
+                        <li><span>Global HR Services</span></li>
+                    </ul>
+                </div>
+                <div class="svc-col reveal d1">
+                    <span class="svc-col__n">Operations</span>
+                    <h3>Running the back office</h3>
+                    <p>Salary processing, statutory filings and the paperwork that carries real penalties when it slips.</p>
+                    <ul class="svc-list">
+                        <li><span>Payroll Management</span></li>
+                        <li><span>Compliance &amp; Legal Services</span></li>
+                        <li><span>Accounting, Audit &amp; Taxation</span></li>
+                        <li><span>HR Technology Solutions</span></li>
+                        <li><span>Employee Relations</span></li>
+                    </ul>
+                </div>
+                <div class="svc-col reveal d2">
+                    <span class="svc-col__n">Growth</span>
+                    <h3>Developing the team</h3>
+                    <p>Policy, structure and training so the people you hire are still with you in three years.</p>
+                    <ul class="svc-list">
+                        <li><span>HR Consulting &amp; Policy Design</span></li>
+                        <li><span>Performance Management</span></li>
+                        <li><span>Training &amp; Development</span></li>
+                        <li><span>Organisation Structure Review</span></li>
+                        <li><span>Employee Handbooks</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top:44px;">
+                <a href="contact.html?type=employer" class="btn btn--solid" data-mode-hover="hire">Brief us on a role
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
-                <p>Connecting talent with opportunity worldwide — strategic HR and management consulting for growing businesses.</p>
-                <div class="footer-social">
-                    <a href="mailto:mdvanjani@udyogservice.in" aria-label="Email us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path></svg></a>
-                    <a href="tel:+919810057943" aria-label="Call us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a>
-                    <a href="https://udyoghrsolutions.in" target="_blank" rel="noopener" aria-label="Visit Udyog HR Solutions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4"></rect><path d="M7 17V7h2.5a2.5 2.5 0 0 1 0 5H7"></path><path d="M14 17V7l4 10V7"></path></svg></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="founder.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">Guides</a></li>
-                    <li><a href="#">Help Center</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="legal.html#privacy">Privacy</a></li>
-                    <li><a href="legal.html#terms">Terms</a></li>
-                </ul>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Synergy Plus Business Consulting Group. <span class="footer-rights">All rights reserved.</span></p>
+    </section>
+
+    <!-- ============================ CONSULTING ============================ -->
+    <section class="section" id="consulting">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">Division 02</span>
+                <h2 class="display-lg">Management Consulting</h2>
+                <p class="lede">Led personally by our founder — a Chartered Accountant and Company Secretary who has sat in the CEO and Director chairs across three countries.</p>
+            </div>
+
+            <div class="svc-grid">
+                <div class="svc-col reveal">
+                    <span class="svc-col__n">01</span>
+                    <h3>Turnaround &amp; performance</h3>
+                    <p>For units that are losing money, losing people, or both.</p>
+                    <ul class="svc-list">
+                        <li><span>Company Turnaround</span></li>
+                        <li><span>Business Process Re-engineering</span></li>
+                        <li><span>Cost Optimisation</span></li>
+                        <li><span>Risk Management</span></li>
+                    </ul>
+                </div>
+                <div class="svc-col reveal d1">
+                    <span class="svc-col__n">02</span>
+                    <h3>Growth &amp; capital</h3>
+                    <p>For businesses with a plan that needs structure and funding behind it.</p>
+                    <ul class="svc-list">
+                        <li><span>Growth &amp; Expansion Strategy</span></li>
+                        <li><span>Funding, Equity &amp; Loan Structuring</span></li>
+                        <li><span>Financial Modelling &amp; Analysis</span></li>
+                        <li><span>Market Entry Strategy</span></li>
+                    </ul>
+                </div>
+                <div class="svc-col reveal d2">
+                    <span class="svc-col__n">03</span>
+                    <h3>How engagements run</h3>
+                    <p>No junior-staffed decks. You work with the principal throughout.</p>
+                    <ul class="svc-list">
+                        <li><span>Diagnostic — 2 to 3 weeks</span></li>
+                        <li><span>Findings &amp; options to the board</span></li>
+                        <li><span>Implementation support</span></li>
+                        <li><span>Retained advisory, optional</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top:44px;">
+                <a href="contact.html?type=employer" class="btn btn--ghost" data-mode-hover="hire">Request a conversation
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ CORPORATE ============================ -->
+    <section class="section section--paper2" id="corporate">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">Division 03</span>
+                <h2 class="display-lg">Corporate Services</h2>
+                <p class="lede">Delivered through SPBCG Product &amp; Services (OPC) Pvt. Ltd. from our Dharuhera base — the practical, on-site work that keeps a plant or office running.</p>
+            </div>
+
+            <div class="sectors reveal">
+                <span class="sector">Electrical Services &amp; Electrical Audit</span>
+                <span class="sector">Engineering Services</span>
+                <span class="sector">AMC Services &amp; Repair</span>
+                <span class="sector">Project Management</span>
+                <span class="sector">Sales &amp; Digital Marketing</span>
+                <span class="sector">Travel Services</span>
+                <span class="sector">Security Services</span>
+                <span class="sector">Housekeeping &amp; Cleaning</span>
+                <span class="sector">Pest Control Services</span>
+            </div>
+
+            <div class="duo" style="margin-top:56px;">
+                <article class="duo__card duo__card--hire reveal" style="cursor:default;">
+                    <span class="duo__tag">Typical bundle</span>
+                    <h3>Plant support</h3>
+                    <p>What a manufacturing client in the Dharuhera belt usually takes from us.</p>
+                    <ul class="duo__points">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Contract staffing for shop floor and supervision</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Payroll and statutory compliance for that headcount</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Electrical audit and AMC cover</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Housekeeping, security and pest control</li>
+                    </ul>
+                </article>
+                <article class="duo__card duo__card--candidate reveal d1" style="cursor:default;">
+                    <span class="duo__tag">Typical bundle</span>
+                    <h3>Office &amp; corporate</h3>
+                    <p>What a Gurgaon office client usually takes from us.</p>
+                    <ul class="duo__points">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Permanent recruitment across functions</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Payroll, accounting and taxation</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Background verification on every joiner</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Travel desk and facilities management</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ ENGAGEMENT ============================ -->
+    <section class="section section--surface">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">Engagement models</span>
+                <h2 class="display-lg">Four ways to work with us.</h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <span class="step__n">01</span>
+                    <h3>Contingency</h3>
+                    <p>You pay on a successful joining. Standard for permanent hiring at junior and mid levels.</p>
+                </div>
+                <div class="step reveal d1">
+                    <span class="step__n">02</span>
+                    <h3>Retained search</h3>
+                    <p>For leadership and specialist roles where the market has to be mapped properly.</p>
+                </div>
+                <div class="step reveal d2">
+                    <span class="step__n">03</span>
+                    <h3>Managed payroll</h3>
+                    <p>Headcount sits on our books. You get one invoice; we carry the statutory burden.</p>
+                </div>
+                <div class="step reveal d3">
+                    <span class="step__n">04</span>
+                    <h3>Retained advisory</h3>
+                    <p>Ongoing consulting access for founders and boards, billed monthly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ FAQ ============================ -->
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head reveal" style="max-width:620px;">
+                <span class="eyebrow">Questions</span>
+                <h2 class="display-lg">Practical answers.</h2>
+            </div>
+            <div class="faq reveal d1">
+                <details open>
+                    <summary>What is the minimum engagement size?</summary>
+                    <p>There isn't one. We've filled single roles for five-person firms and run multi-site staffing for companies with several hundred people on our payroll.</p>
+                </details>
+                <details>
+                    <summary>How are recruitment fees structured?</summary>
+                    <p>A percentage of annual CTC for contingency hiring, with a replacement guarantee period. Retained search is staged across the mandate. Managed payroll is a per-head monthly charge. Everything is agreed in writing before we start.</p>
+                </details>
+                <details>
+                    <summary>Can you take over payroll from an existing provider?</summary>
+                    <p>Yes, and we do it regularly. Transitions are planned around a month-end so no salary cycle is disrupted.</p>
+                </details>
+                <details>
+                    <summary>Do you handle PF, ESI and labour law filings?</summary>
+                    <p>Yes — provident fund, ESI, professional tax, gratuity, contract labour registers and returns are all part of the compliance service.</p>
+                </details>
+                <details>
+                    <summary>Which locations can you staff?</summary>
+                    <p>Strongest across the Gurgaon–Dharuhera–Rewari corridor and the wider NCR, with delivery elsewhere in India through our network, plus global HR support for UK and Singapore operations.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-band">
+        <div class="wrap">
+            <h2>Tell us what you need done.</h2>
+            <p>A short conversation is usually enough to tell you whether we're the right firm for the job — and we'll say so if we're not.</p>
+            <div class="hero__actions">
+                <a href="contact.html?type=employer" class="btn btn--solid btn--lg" data-mode-hover="hire">Start a conversation
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="contact.html?type=candidate" class="btn btn--light btn--lg" data-mode-hover="candidate">I'm a candidate</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer__top">
+                <div>
+                    <div class="footer__logo"><img src="Assets/logo.png" alt="Synergy Plus Business Consulting Group"></div>
+                    <p>Recruitment, HR operations, corporate services and management consulting for businesses across India's industrial corridor and beyond.</p>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="founder.html">About &amp; leadership</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html?type=candidate">Submit your CV</a></li>
+                        <li><a href="contact.html?type=employer">Hire with us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#hr">HR &amp; Business</a></li>
+                        <li><a href="services.html#consulting">Management Consulting</a></li>
+                        <li><a href="services.html#corporate">Corporate Services</a></li>
+                        <li><a href="legal.html#privacy">Privacy &amp; Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer__contact">
+                        <li><b>Registered office</b>724/814, Galleria Tower, Phase-IV, DLF City, Gurgaon, Haryana 122002</li>
+                        <li><b>Corporate office</b>Plot 5/7, Dharuhera Industrial Area, Rewari, Haryana 123106</li>
+                        <li><b>Email</b><a href="mailto:mdvanjani@udyogservice.in">mdvanjani@udyogservice.in</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 Synergy Plus Business Consulting Group. All rights reserved.</span>
+                <span>GST 06ABHCS4149M1ZW · Established 1 April 2014</span>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-

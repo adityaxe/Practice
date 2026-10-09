@@ -1,221 +1,276 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Synergy Plus - SPBC Group</title>
+    <title>About &amp; Leadership — SPBC Group</title>
+    <meta name="description" content="Founded 1 April 2014 in Gurgaon and Dharuhera. The story, leadership and offices of Synergy Plus Business Consulting Group.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="theme-wash" id="themeWash" aria-hidden="true"></div>
-    <div class="mesh-background">
+    <div class="mode-sweep" id="modeSweep" aria-hidden="true"></div>
 
-        <div class="shape-orb orb-lg"></div>
-        <div class="shape-orb orb-md"></div>
-        <div class="shape-orb orb-sm"></div>
-    </div>
-
-    <nav class="navbar">
-        <a href="index.html" class="logo-container">
-            <img src="Assets/logo.png" alt="Synergy Plus Business Consulting" class="logo-img">
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="founder.html" style="color: var(--primary);">About us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    <nav class="nav" id="nav">
+        <div class="wrap nav__inner">
+            <a href="index.html" class="nav__logo" aria-label="SPBC Group home">
+                <img src="Assets/logo.png" alt="Synergy Plus Business Consulting Group">
+            </a>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="founder.html" class="is-active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mode-switch" role="group" aria-label="Choose your view">
+                <button class="mode-switch__btn" data-mode-set="hire" type="button">I'm hiring</button>
+                <button class="mode-switch__btn" data-mode-set="candidate" type="button">I'm looking</button>
+            </div>
+            <a href="contact.html" class="btn btn--ink nav__cta">Talk to us</a>
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
-    <section class="founder-hero">
-        <div class="container hero-split">
-            <div class="hero-text fade-in-up">
-                <div class="badge">SPBC Group · Est. 2014</div>
-                <h1>Practical expertise. <span class="brand-accent">Enduring impact.</span></h1>
-                <p style="font-size: 1.25rem; color: var(--text-body); margin-bottom: 32px;">Synergy Plus Business Consulting Group connects people, process, and performance across India and global markets.</p>
-                <div class="quote-box">
-                    "Excellence is not just a skill, it's an attitude. We build partnerships that last a lifetime."
-                </div>
+    <header class="page-head">
+        <div class="page-head__bg" aria-hidden="true">
+            <div class="bg-aurora bg-aurora--a"></div>
+            <div class="bg-aurora bg-aurora--b"></div>
+            <div class="bg-dots"></div>
+            <div class="bg-grain"></div>
+        </div>
+        <div class="wrap">
+            <span class="eyebrow fade-up">Established 1 April 2014</span>
+            <h1 class="display-xl fade-up d1" style="max-width:17ch;">Practical expertise. <em style="font-style:italic;color:var(--brand);">Enduring</em> relationships.</h1>
+            <p class="lede fade-up d2" style="font-size:1.2rem;">Synergy Plus Business Consulting Group was built to bring senior-grade advice and dependable people operations to the businesses of India's industrial corridor.</p>
+        </div>
+    </header>
+
+    <section class="section section--tight">
+        <div class="wrap">
+            <div class="stats">
+                <div class="stat reveal"><div class="stat__num" data-count="2014">2014</div><div class="stat__label">Founded in Gurgaon &amp; Dharuhera</div></div>
+                <div class="stat reveal d1"><div class="stat__num" data-count="100">100<span>+</span></div><div class="stat__label">Corporate clients served</div></div>
+                <div class="stat reveal d2"><div class="stat__num" data-count="3">3</div><div class="stat__label">Countries of executive experience</div></div>
+                <div class="stat reveal d3"><div class="stat__num" data-count="40">40<span>+</span></div><div class="stat__label">Years of professional practice</div></div>
             </div>
-             <div class="hero-image fade-in-right">
-                <div class="brand-story-panel">
-                    <img src="Assets/adya-mark.png" alt="Synergy Plus Business Consulting Group logo" class="brand-story-logo">
-                    <span class="brand-story-kicker">One group. Many ways to move business forward.</span>
-                    <div class="brand-story-lines"><span>HR Solutions</span><span>Corporate Services</span><span>Management Consulting</span></div>
+        </div>
+    </section>
+
+    <!-- ============================ FOUNDER ============================ -->
+    <section class="section section--surface">
+        <div class="wrap founder">
+            <div class="reveal">
+                <div class="portrait">
+                    <!-- Replace with <img src="Assets/founder.jpg" alt="Mr. Vanjani"> when a photo is available -->
+                    <span class="portrait__initials">MV</span>
+                    <span class="portrait__name">Mr. Vanjani</span>
+                    <span class="portrait__role">Founder &amp; Chief Executive</span>
+                </div>
+                <ul class="creds">
+                    <li><span>01</span><span>Chartered Accountant — ICAI, qualified 1977–78</span></li>
+                    <li><span>02</span><span>Company Secretary — ICSI</span></li>
+                    <li><span>03</span><span>Shri Ram College of Commerce alumnus</span></li>
+                    <li><span>04</span><span>Secretary cum Financial Controller</span></li>
+                    <li><span>05</span><span>Chief Executive &amp; Director — India, UK, Singapore</span></li>
+                </ul>
+            </div>
+
+            <div class="bio reveal d1">
+                <span class="eyebrow">Leadership</span>
+                <h2 class="display-lg" style="margin:18px 0 26px;">The practitioner behind the practice.</h2>
+                <p>Most consultancies sell you the partner and deliver the analyst. We are built the other way round. Our founder qualified as both a Chartered Accountant with the ICAI and a Company Secretary with the ICSI in 1977–78, after graduating from Shri Ram College of Commerce — and then spent the following four decades actually running businesses rather than advising from the outside.</p>
+                <p>That career included service as Secretary cum Financial Controller, as Chief Executive, and as a Director, with mandates in India, the United Kingdom and Singapore. It is the reason our consulting engagements start with the balance sheet and the shop floor rather than a template, and the reason our recruitment desks can tell the difference between a CV that reads well and a candidate who can do the job.</p>
+                <blockquote class="pull-quote">Excellence is not just a skill, it is an attitude. We build partnerships that last a lifetime.</blockquote>
+                <p>The group was founded on 1 April 2014 with two locations chosen deliberately: Gurgaon, for corporate clients and professional hiring, and Dharuhera, to sit inside the manufacturing belt we serve. A decade on, both are still open nine hours a day, and clients from the first year are still with us.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ STORY ============================ -->
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">The group</span>
+                <h2 class="display-lg">Two entities, one accountable team.</h2>
+                <p class="lede">The structure exists so that a client can take professional services and on-site corporate services from the same relationship, under the same GST registration and the same point of contact.</p>
+            </div>
+
+            <div class="duo">
+                <article class="duo__card duo__card--hire reveal" style="cursor:default;">
+                    <span class="duo__tag">Entity 01</span>
+                    <h3>Synergy Plus Business Consulting Group</h3>
+                    <p>The Gurgaon-registered practice. Recruitment, HR operations, compliance, accounting and management consulting.</p>
+                    <ul class="duo__points">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Registered office — Galleria Tower, DLF Phase IV</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> GST 06ABHCS4149M1ZW</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Professional and leadership hiring</li>
+                    </ul>
+                </article>
+                <article class="duo__card duo__card--candidate reveal d1" style="cursor:default;">
+                    <span class="duo__tag">Entity 02</span>
+                    <h3>SPBCG Product &amp; Services (OPC) Pvt. Ltd.</h3>
+                    <p>The Dharuhera company. Corporate and facilities services delivered on site, plus industrial staffing.</p>
+                    <ul class="duo__points">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Corporate office — Dharuhera Industrial Area</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> udyoghrsolutions.in</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Electrical, engineering, AMC and facilities</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ VALUES ============================ -->
+    <section class="section section--paper2">
+        <div class="wrap">
+            <div class="section-head reveal">
+                <span class="eyebrow">How we operate</span>
+                <h2 class="display-lg">Four commitments we actually hold to.</h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <span class="step__n">01</span>
+                    <h3>Honest shortlists</h3>
+                    <p>We would rather send three candidates we believe in than twelve that pad the numbers. If we can't fill it, we say so early.</p>
+                </div>
+                <div class="step reveal d1">
+                    <span class="step__n">02</span>
+                    <h3>Never charge candidates</h3>
+                    <p>Not for registration, not for placement, not for anything. Fees come from the employer. There are no exceptions.</p>
+                </div>
+                <div class="step reveal d2">
+                    <span class="step__n">03</span>
+                    <h3>Compliance before convenience</h3>
+                    <p>Statutory filings are done on time and correctly, even where a shortcut would be quicker and nobody would notice for a year.</p>
+                </div>
+                <div class="step reveal d3">
+                    <span class="step__n">04</span>
+                    <h3>Principal-level attention</h3>
+                    <p>The person who takes your brief is the person accountable for delivering it. Mandates are not handed down a chain.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="profile-section">
-        <div class="container">
-            <div class="profile-layout">
-                <div class="profile-image-col fade-in-left">
-                    <div class="founder-frame">
-                        <div class="img-placeholder-portrait">
-                            <span class="portrait-initials">MV</span>
-                            <span style="font-weight: 700;">Mr. Vanjani</span>
-                            <small>Founder & CEO</small>
+    <!-- ============================ OFFICES ============================ -->
+    <section class="section section--surface">
+        <div class="wrap">
+            <div class="offices">
+                <div class="reveal">
+                    <div class="section-head" style="margin-bottom:36px;">
+                        <span class="eyebrow">Find us</span>
+                        <h2 class="display-lg">Come and see us.</h2>
+                        <p class="lede">Both offices are open nine hours a day. Walk in, or call ahead and we'll make sure the right person is there.</p>
+                    </div>
+                    <div class="office">
+                        <span class="office__tag">Registered office</span>
+                        <h3>Synergy Plus Business Consulting Group</h3>
+                        <address>724/814, Galleria Tower, Phase-IV, DLF City,<br>Gurgaon, Haryana 122002</address>
+                        <div class="office__meta">
+                            <a href="tel:+911244755590">+91-124 475 559</a>
+                            <a href="tel:+919810057943">+91 98100 57943</a>
+                            <a href="mailto:mdvanjani@udyogservice.in">mdvanjani@udyogservice.in</a>
+                            <span>Open 9 hours daily · GST 06ABHCS4149M1ZW</span>
                         </div>
                     </div>
-                    <div style="background: white; padding: 24px; border-radius: 16px; border: 1px solid var(--border-card);">
-                        <h3 style="margin-bottom: 16px; font-size: 1.2rem;">Credentials</h3>
-                        <ul style="display: flex; flex-direction: column; gap: 12px;">
-                             <li style="display: flex; gap: 10px; align-items: center;">
-                                <div style="width: 8px; height: 8px; background: var(--primary); border-radius: 50%;"></div>
-                                <span>Chartered Accountant (ICAI)</span>
-                            </li>
-                            <li style="display: flex; gap: 10px; align-items: center;">
-                                <div style="width: 8px; height: 8px; background: var(--accent); border-radius: 50%;"></div>
-                                <span>Company Secretary (ICSI)</span>
-                            </li>
-                             <li style="display: flex; gap: 10px; align-items: center;">
-                                <div style="width: 8px; height: 8px; background: #64748b; border-radius: 50%;"></div>
-                                <span>SRCC Alumnus</span>
-                            </li>
-                        </ul>
+                    <div class="office">
+                        <span class="office__tag">Corporate office</span>
+                        <h3>SPBCG Product &amp; Services (OPC) Pvt. Ltd.</h3>
+                        <address>Plot 5/7, Dharuhera Industrial Area,<br>Dharuhera, Rewari, Haryana 123106</address>
+                        <div class="office__meta">
+                            <a href="tel:+911274294979">+91-1274 294 979</a>
+                            <a href="tel:+919650560013">+91 96505 60013</a>
+                            <a href="https://udyoghrsolutions.in" target="_blank" rel="noopener">udyoghrsolutions.in</a>
+                            <span>Open 9 hours daily · GST 06ABHCS4149M1ZW</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="profile-content-col fade-in-right">
-                    <h2 style="margin-bottom: 24px; font-size: 2.5rem;">Built on professional depth</h2>
-                    <div class="bio-text">
-                        <p style="margin-bottom: 24px;">Founded on April 1, 2014, in Gurgaon and Dharuhera, Synergy Plus Business Consulting Group was created to bring dependable business guidance and people solutions to growing organizations.</p>
-                        <p>Mr. Vanjani is an SRCC alumnus and has held professional qualifications in Chartered Accountancy (ICAI) and Company Secretaryship (ICSI) since 1977-78. His experience includes senior roles as Secretary cum Financial Controller, CEO, and Director in India, the UK, and Singapore.</p>
-                    </div>
-
-                    <div style="margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;">
-                        <span style="background: var(--primary-soft); color: var(--primary); padding: 8px 16px; border-radius: 50px; font-weight: 600;">Strategic HR</span>
-                        <span style="background: var(--accent-light); color: var(--accent); padding: 8px 16px; border-radius: 50px; font-weight: 600;">Global Leadership</span>
-                        <span style="background: #f1f5f9; color: var(--text-heading); padding: 8px 16px; border-radius: 50px; font-weight: 600;">Business Transformation</span>
+                <div class="map-card reveal d1">
+                    <svg class="map-svg" viewBox="0 0 520 300" role="img" aria-label="Coverage: Gurgaon and Dharuhera offices, serving India, the UK and Singapore">
+                        <rect class="land" x="18" y="40" width="300" height="220" rx="18"/>
+                        <text x="38" y="68" opacity=".55">HARYANA CORRIDOR</text>
+                        <line x1="120" y1="130" x2="196" y2="196" stroke="currentColor" stroke-width="1.4" stroke-dasharray="4 5" opacity=".35"/>
+                        <circle class="pin-ring" cx="120" cy="130" r="5"/>
+                        <circle class="pin" cx="120" cy="130" r="6"/>
+                        <text x="134" y="128">Gurgaon</text>
+                        <text x="134" y="142" opacity=".6">Registered office</text>
+                        <circle class="pin-ring pin-ring--2" cx="196" cy="196" r="5"/>
+                        <circle class="pin" cx="196" cy="196" r="6"/>
+                        <text x="210" y="194">Dharuhera</text>
+                        <text x="210" y="208" opacity=".6">Corporate office</text>
+                        <path d="M318 110 C 390 70, 420 70, 470 92" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 6" opacity=".4"/>
+                        <circle class="pin" cx="470" cy="92" r="5"/>
+                        <text x="432" y="78">United Kingdom</text>
+                        <path d="M318 200 C 390 236, 420 236, 470 214" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 6" opacity=".4"/>
+                        <circle class="pin" cx="470" cy="214" r="5"/>
+                        <text x="444" y="238">Singapore</text>
+                    </svg>
+                    <div class="map-legend">
+                        <span><b>2</b> offices in Haryana</span>
+                        <span><b>3</b> countries of experience</span>
+                        <span><b>55 km</b> apart, one team</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="office-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="badge">Find us</div>
-                <h2>Two offices, one connected team</h2>
-                <p>Talk to the team closest to your business.</p>
-            </div>
-            <div class="office-grid">
-                <article class="office-card reveal">
-                    <span class="office-label">Registered Office</span>
-                    <h3>Synergy Plus Business Consulting Group</h3>
-                    <p>724/814, Galleria Tower, Phase-IV, DLF City, Gurgaon, Haryana-122002</p>
-                    <a href="tel:+919810057943">+91-124475559 · 9810057943</a>
-                    <a href="mailto:mdvanjani@udyogservice.in">mdvanjani@udyogservice.in</a>
-                    <span class="office-meta">Open 9 hours daily · GST 06ABHCS4149M1ZW</span>
-                </article>
-                <article class="office-card office-card--accent reveal d1">
-                    <span class="office-label">Corporate Office</span>
-                    <h3>SPBCG Product &amp; Services (OPC) Private Limited</h3>
-                    <p>Plot no. 5/7, Dharuhera Industrial Area, Dharuhera, Rewari (Distt), Haryana-123106</p>
-                    <a href="tel:+919810057943">+91-1274294979 · 9650560013 · 9810057943</a>
-                    <a href="mailto:mdvanjani@udyogservice.in">mdvanjani@udyogservice.in</a>
-                    <a href="https://udyoghrsolutions.in" target="_blank" rel="noopener">udyoghrsolutions.in</a>
-                    <span class="office-meta">Open 9 hours daily · GST 06ABHCS4149M1ZW</span>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="impact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Journey & Impact</h2>
-                <p>Building a legacy of trust and performance since 2014.</p>
-            </div>
-
-            <div class="impact-grid">
-
-                <div class="impact-card lg reveal">
-                    <span class="year-tag">2014</span>
-                    <h3>The Inception</h3>
-                    <p>Synergy Plus Business Consulting Group was established in the industrial hubs of Gurgaon and Dharuhera. What started as a vision to bridge the gap between talent and opportunity has grown into a premier recruitment partner.</p>
-                    <div style="margin-top: auto; display: flex; gap: 12px;">
-
-                    </div>
-                </div>
-
-
-                <div class="impact-card md reveal d1" style="justify-content: center; align-items: center; text-align: center;">
-                    <div class="stat-value">100+</div>
-                    <div class="stat-label">Corporate Clients</div>
-                    <p style="font-size: 0.9rem; margin-top: 8px; color: var(--text-muted);">Trusting our expertise</p>
-                </div>
-
-
-                <div class="impact-card md reveal d2">
-                    <div style="width: 48px; height: 48px; background: var(--accent-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--accent);">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                    </div>
-                    <h3>Global Footprint</h3>
-                    <p>From India to the UK and Singapore, our network knows no borders.</p>
-                </div>
-
-
-                <div class="impact-card lg card-featured reveal d3">
-                    <span class="year-tag">Mission</span>
-                    <h3 style="font-size: 2rem; margin-bottom: 16px;">Empowering Potential</h3>
-                    <p style="font-size: 1.1rem; opacity: 0.9;">"To provide top professionals to the corporate world and help candidates realize their true potential."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <footer class="site-footer">
-        <div class="container footer-content">
-            <div class="footer-col brand-col">
-                <a href="index.html" class="logo-container">
-                    <img src="Assets/logo.png" alt="Synergy Plus Business Consulting" class="logo-img">
+    <section class="section cta-band">
+        <div class="wrap">
+            <h2>Work with people who have done the job.</h2>
+            <p>Whether you need one hire, a payroll handover or a board-level view on a turnaround, start with a conversation.</p>
+            <div class="hero__actions">
+                <a href="contact.html?type=employer" class="btn btn--solid btn--lg" data-mode-hover="hire">Talk to us
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
-                <p>Connecting talent with opportunity worldwide — strategic HR and management consulting for growing businesses.</p>
-                <div class="footer-social">
-                    <a href="mailto:mdvanjani@udyogservice.in" aria-label="Email us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path></svg></a>
-                    <a href="tel:+919810057943" aria-label="Call us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a>
-                    <a href="https://udyoghrsolutions.in" target="_blank" rel="noopener" aria-label="Visit Udyog HR Solutions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4"></rect><path d="M7 17V7h2.5a2.5 2.5 0 0 1 0 5H7"></path><path d="M14 17V7l4 10V7"></path></svg></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="founder.html">About</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">Guides</a></li>
-                    <li><a href="#">Help Center</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="legal.html#privacy">Privacy</a></li>
-                    <li><a href="legal.html#terms">Terms</a></li>
-                </ul>
+                <a href="services.html" class="btn btn--light btn--lg">See our services</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Synergy Plus Business Consulting Group. <span class="footer-rights">All rights reserved.</span></p>
+    </section>
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer__top">
+                <div>
+                    <div class="footer__logo"><img src="Assets/logo.png" alt="Synergy Plus Business Consulting Group"></div>
+                    <p>Recruitment, HR operations, corporate services and management consulting for businesses across India's industrial corridor and beyond.</p>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="founder.html">About &amp; leadership</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html?type=candidate">Submit your CV</a></li>
+                        <li><a href="contact.html?type=employer">Hire with us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#hr">HR &amp; Business</a></li>
+                        <li><a href="services.html#consulting">Management Consulting</a></li>
+                        <li><a href="services.html#corporate">Corporate Services</a></li>
+                        <li><a href="legal.html#privacy">Privacy &amp; Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer__contact">
+                        <li><b>Registered office</b>724/814, Galleria Tower, Phase-IV, DLF City, Gurgaon, Haryana 122002</li>
+                        <li><b>Corporate office</b>Plot 5/7, Dharuhera Industrial Area, Rewari, Haryana 123106</li>
+                        <li><b>Email</b><a href="mailto:mdvanjani@udyogservice.in">mdvanjani@udyogservice.in</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 Synergy Plus Business Consulting Group. All rights reserved.</span>
+                <span>GST 06ABHCS4149M1ZW · Established 1 April 2014</span>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
