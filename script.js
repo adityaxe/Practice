@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -16,28 +16,17 @@
     });
 
 
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
+    // Generalized scroll-reveal for any .reveal / .reveal-scale element
+    const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
+                entry.target.classList.add('is-visible');
+                revealObserver.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.15 });
 
-
-    const bentoItems = document.querySelectorAll('.bento-item');
-    bentoItems.forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(item);
-    });
+    document.querySelectorAll('.reveal, .reveal-scale').forEach(el => revealObserver.observe(el));
 
 
     const statsObserver = new IntersectionObserver((entries, observer) => {
@@ -84,7 +73,7 @@
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
-    
+
     if (mobileBtn && navLinks) {
         mobileBtn.addEventListener('click', () => {
             mobileBtn.classList.toggle('active');
@@ -101,6 +90,41 @@
             });
         });
     }
+
+    // Navbar scrolled state
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        const updateNavbar = () => navbar.classList.toggle('scrolled', window.scrollY > 20);
+        updateNavbar();
+        window.addEventListener('scroll', updateNavbar, { passive: true });
+    }
+
+    // ---- Hover illusion: theme wash + hero copy crossfade ----
+    const washEl = document.getElementById('themeWash');
+    function setWashMode(mode) {
+        if (!washEl) return;
+        washEl.classList.remove('mode-hire', 'mode-candidate');
+        if (mode) washEl.classList.add('mode-' + mode);
+    }
+
+    const heroSection = document.querySelector('[data-hero-interactive]');
+    const heroCopies = heroSection ? heroSection.querySelectorAll('.hero-copy') : [];
+    const heroDefaultCopy = heroSection ? heroSection.querySelector('.hero-copy--default') : null;
+
+    function activateHeroCopy(mode) {
+        if (!heroCopies.length) return;
+        heroCopies.forEach(c => c.classList.remove('is-active'));
+        const target = mode && heroSection.querySelector('.hero-copy--' + mode);
+        (target || heroDefaultCopy)?.classList.add('is-active');
+    }
+
+    document.querySelectorAll('[data-wash]').forEach(el => {
+        const mode = el.dataset.wash;
+        el.addEventListener('mouseenter', () => { setWashMode(mode); activateHeroCopy(mode); });
+        el.addEventListener('mouseleave', () => { setWashMode(null); activateHeroCopy(null); });
+        el.addEventListener('focus', () => { setWashMode(mode); activateHeroCopy(mode); });
+        el.addEventListener('blur', () => { setWashMode(null); activateHeroCopy(null); });
+    });
 });
 
 
@@ -119,7 +143,6 @@ window.switchForm = function(type) {
         if(candidateBtn) candidateBtn.classList.add('active');
         if(employerBtn) employerBtn.classList.remove('active');
         if(indicator) indicator.style.transform = 'translateX(0)';
-
 
 
 
@@ -149,4 +172,3 @@ window.switchForm = function(type) {
         ], { duration: 300, easing: 'ease-out' });
     }
 }
-
