@@ -47,7 +47,10 @@ Key facts used across the site (do not invent alternatives):
   and Director across India, the UK and Singapore
 - 21 service lines: 12 HR & business, 6 management consulting, 9 corporate
   services (the docx files list these verbatim)
-- Clients named on site: ZETWERK, Amul, GATI, Tech Mahindra, TATA BlueScope Steel, Coforge
+- Client logos live in `Assets/logos/` (47 files, kebab-case slugs). Sources are the
+  originals in `Adya/pics/`. The homepage marquee shows a curated 24; the About page
+  carries the full roster grouped by sector. TATA BlueScope Steel is named in older
+  copy but has no logo file, so it is not currently shown.
 
 ## Design direction
 
@@ -96,6 +99,15 @@ Adding a new mode-aware element: give it `.swap` with the three children, or use
 - `[data-count]` on a number animates it when scrolled into view
 - Icons are inline SVG (feather-style, `stroke-width="2"`), never an icon font
 - All motion is gated by a `prefers-reduced-motion` block at the end of style.css
+- Client logos use `.logo-tile` (a bordered white tile; the image is contained,
+  greyscale in the marquee, full colour in the About grid). Add `.logo-tile--dark`
+  for artwork that is white or sits on black — currently Shiv Nadar School,
+  Masters' Union and Gurgaon Property Hubs.
+- The marquee loops by duplicating each row's tiles and translating -50%, so if you
+  add a logo to a row you must add it to that row's duplicate set too, and mark the
+  duplicate `aria-hidden="true"` with empty `alt`.
+- Logos are capped at 440px wide (320px for the heavy transparent crests) to keep the
+  page under ~1.1 MB of imagery. Re-run the sizing if you add large files.
 
 ## Known gaps / good next tasks
 
@@ -106,6 +118,9 @@ Adding a new mode-aware element: give it `.swap` with the three children, or use
   comment for an `<img>`. The design was built to accept real photos.
 - Testimonials are illustrative, not verified client quotes — confirm before
   treating them as real attributions.
-- Client logos are set as text in the marquee; real logo files would be better.
+- Client logos are displayed without written permission on file. Standard B2B
+  practice, but worth confirming with the larger brands before any ad campaign.
+- `Adya/` and `Assets/logo.docx` are tracked, so GitHub Pages serves them publicly.
+  Untrack them (`git rm --cached`, plus a `.gitignore`) if that is unwanted.
 - No automated browser testing was possible on the original dev machine (no
   node/python/headless Chrome), so changes were verified structurally only.
