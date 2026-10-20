@@ -113,9 +113,14 @@ Adding a new mode-aware element: give it `.swap` with the three children, or use
 
 - **Forms do nothing.** `contact.html` has no backend — submissions are discarded.
   Needs a form service (Formspree/Netlify) or a mail handler.
-- **No photography.** `.portrait` on `index.html` and `founder.html` are photo
-  slots showing initials; drop `Assets/founder.jpg` in and swap the placeholder
-  comment for an `<img>`. The design was built to accept real photos.
+- Photography is thin: `Assets/founder.jpg` (portrait of Mr. Vanjani) and
+  `Assets/team-meeting.jpg` (team at the Gurgaon office) are the only two, and both
+  were recovered from the design PDF in `Adya/`. The team shot is low resolution
+  (784px) and should not be used larger than roughly 840px wide. Better originals
+  from the client would be worth asking for.
+- That same PDF holds three generic stock photos (a consultation with a gavel, a
+  boardroom presentation, a posed pair). They are unused on purpose — their licence
+  is unknown, since they came from a designer's mockup. Confirm rights before using.
 - Testimonials are illustrative, not verified client quotes — confirm before
   treating them as real attributions.
 - Client logos are displayed without written permission on file. Standard B2B
